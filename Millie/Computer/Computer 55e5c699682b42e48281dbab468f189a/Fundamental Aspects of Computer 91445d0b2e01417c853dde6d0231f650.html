@@ -1,0 +1,645 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Fundamental Aspects of Computer</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="91445d0b-2e01-417c-853d-de6d0231f650" class="page sans"><header><img class="page-cover-image" src="Fundamental%20Aspects%20of%20Computer%2091445d0b2e01417c853dde6d0231f650/Red_Pop_Culture_Inspired_Greeting__Generic_Halloween_Facebook_Cover.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Fundamental%20Aspects%20of%20Computer%2091445d0b2e01417c853dde6d0231f650/Pink_and_Purple_Window_90s_Anime_PartyDancePop_Playlist_Cover_(6).jpg"/></div><h1 class="page-title">Fundamental Aspects of Computer</h1></header><div class="page-body"><ol type="1" id="83ccf31a-e1d3-4961-bba1-fe9f1fc7c4e8" class="numbered-list" start="1"><li>Define a computer. Write down the functions of a computer.<p id="a648f7ab-5d3b-4bf1-b098-5c83ed5b61d6" class="">Computer is an electronic data processing device capable of taking an input data, processing them and displaying the processed result at a very high speed under the control of set of instruction. </p><p id="81830244-dd24-46ef-a3a6-96f1752b34d7" class=""> The features of computer are:</p><ol type="1" id="c3bc4e1e-8883-4a8f-b380-ba03daeac36c" class="numbered-list" start="1"><li>Speed</li></ol><ol type="1" id="f58d557c-f954-4b88-95df-803f3135766d" class="numbered-list" start="2"><li>Accuracy</li></ol><ol type="1" id="0c902241-da6f-4ab6-968b-c0d4bd037268" class="numbered-list" start="3"><li>Versatility</li></ol><ol type="1" id="2e267cf8-6161-4878-9737-e754c1b37ac3" class="numbered-list" start="4"><li>Diligence</li></ol></li></ol><ol type="1" id="4846a876-3f3d-4aa0-bd2b-1c622d49fd3d" class="numbered-list" start="2"><li>Define the terms input, processing, and output as used in computer science.<p id="0b2a2bc6-f78b-4442-ad74-a7ae7d7f15d4" class=""><mark class="highlight-yellow"><strong><span style="border-bottom:0.05em solid"><em>Input </em></span></strong></mark>is the raw information entered into a computer from the input device. It is a collection of letter, numbers, images, sounds, videos, etc.</p><p id="6dde0841-5006-4a48-bcec-2500a41f1ccd" class=""><em><span style="border-bottom:0.05em solid"><mark class="highlight-yellow"><strong>Process </strong></mark></span></em>is the operation of data as per the given instruction. It is totally internal process of the computer system</p><p id="33c441b0-c0a1-4de5-acee-d3ba44053051" class=""><em><span style="border-bottom:0.05em solid"><mark class="highlight-yellow"><strong>Output</strong></mark></span></em> is the processed data given by a computer after data processing. Output is also called result.</p></li></ol><ol type="1" id="4fad6b86-3eee-43e4-9a05-8df270f7eb22" class="numbered-list" start="3"><li>List the characteristics of a modern computer.<ol type="a" id="e5696b4b-915c-494b-982c-74e4eeb1afde" class="numbered-list" start="1"><li>High Speed</li></ol><ol type="a" id="47327f26-783f-47f0-a7fe-9418989c4e6a" class="numbered-list" start="2"><li>Accuracy</li></ol><ol type="a" id="929c737d-b771-414f-834c-af3048042a9e" class="numbered-list" start="3"><li>Diligence</li></ol><ol type="a" id="1640bbed-c5ea-4ee5-a371-f540ccfcfab9" class="numbered-list" start="4"><li>Automatic</li></ol><ol type="a" id="6c4626e5-75c5-4664-9aec-975fb27cfde9" class="numbered-list" start="5"><li>Storage Capability</li></ol></li></ol><ol type="1" id="06edd72b-9115-4f37-b0ec-d96f98ce4121" class="numbered-list" start="4"><li>What are the limitations of a computer?<ul id="e651a385-6b7b-403b-a3d8-2b4b988a5231" class="bulleted-list"><li style="list-style-type:disc"><strong>Computer</strong> cannot operate without the instructions given by humans. It is programmed to work effectively, fast and accurately. </li></ul><ul id="a5f9106d-3ee8-436e-8bf7-dd3391936858" class="bulleted-list"><li style="list-style-type:disc"><strong>Computer</strong> does not have intelligence of its own to complete the tasks. ...</li></ul><ul id="764c8168-7a74-4910-9db0-bb20227d6bc4" class="bulleted-list"><li style="list-style-type:disc">Lack of feeling is another <strong>limitation</strong> of <strong>computer</strong>.</li></ul><ul id="bab07c5f-2689-465a-9180-538098c913c7" class="bulleted-list"><li style="list-style-type:disc"><strong>Computer</strong> has no learning power.</li></ul></li></ol><ol type="1" id="d0dd0d24-4bbb-4502-a40c-599e1ce3ec0e" class="numbered-list" start="5"><li>What is meant by computer generations? Name the different computer generations.<p id="35bc4c7d-feaf-4b49-b272-ff049fad56eb" class="">The phase wise development of computers on the basis of speed electronic component, performance and specific period is known as computer generations.</p><p id="f843f6f0-bb3d-43dd-b642-d6ceab53c77a" class=""> The different computer generations:</p><ul id="59dd6a47-79f5-4c89-b1a1-d3b812e08108" class="bulleted-list"><li style="list-style-type:disc">1940 – 1956: First <strong>Generation</strong> – Vacuum Tubes. These early <strong>computers</strong> used vacuum tubes as circuitry and magnetic drums for memory. </li></ul><ul id="42a5d601-5e71-455c-b6e8-ed950398636b" class="bulleted-list"><li style="list-style-type:disc">1956 – 1963: Second <strong>Generation</strong> – Transistors. </li></ul><ul id="b3e11316-ae1d-4184-816e-712a1a24bbb3" class="bulleted-list"><li style="list-style-type:disc">1964 – 1971: Third <strong>Generation</strong> – Integrated Circuits.</li></ul><ul id="b665dc1a-2536-400a-912e-c1ac021b4e5f" class="bulleted-list"><li style="list-style-type:disc">1972 – 2010: Fourth <strong>Generation</strong> – Microprocessors</li></ul><ul id="8f8a3103-b25b-4c09-bd64-13ef649e8bc4" class="bulleted-list"><li style="list-style-type:disc">Fifth Generation Computer</li></ul></li></ol><ol type="1" id="8fedb987-2dc8-4bf3-b59a-b0d5512bd525" class="numbered-list" start="6"><li> List the features of the fourth generation computers.<p id="79831c0b-5514-441b-a70b-fb9e7c3671fe" class="">The fourth-generation computer are as follows:</p><ul id="07dc79fe-1f2b-482f-be44-04ee3415fae6" class="bulleted-list"><li style="list-style-type:disc">Use of microprocessor in place of transistors.</li></ul><ul id="101accca-888e-4150-9658-cc71fdc955c3" class="bulleted-list"><li style="list-style-type:disc">Processing speed in pico second (Processing of billions of instructions in second)</li></ul><ul id="72776f33-ef28-44f0-9d1f-86363118ff3c" class="bulleted-list"><li style="list-style-type:disc">User-friendly computers which used many high level language ( BASIC,C,etc) for programming</li></ul><ul id="bfedae54-642c-4405-b0e4-fb82d238ca42" class="bulleted-list"><li style="list-style-type:disc">Use of magnetic storage device as auxiliary storage and semi-conductor as primary memory.</li></ul></li></ol><ol type="1" id="f9100fd5-aef7-45e6-b026-43066949702c" class="numbered-list" start="7"><li>What is an IC?<p id="1453614c-4181-43d6-a608-95054b5505d8" class="">An integrated circuit, or IC, is small chip that can function as an amplifier, oscillator, timer, microprocessor, or even computer memory.</p></li></ol><ol type="1" id="51af9b78-58f7-4514-94bb-0a3514211837" class="numbered-list" start="8"><li>Define Artificial Intelligence.<p id="af36f39a-3e92-44e1-bbb9-2ccf5ec4248c" class="">Artificial Intelligence refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions.</p></li></ol><ol type="1" id="0d4eec92-949c-4fc6-b226-3c48afb235ca" class="numbered-list" start="9"><li>List some areas where computers are used.<ol type="a" id="8614b3cd-73ee-44f7-988f-583bafb33684" class="numbered-list" start="1"><li>Education</li></ol><ol type="a" id="af83efd7-b95e-40f4-a82d-090f26eb599e" class="numbered-list" start="2"><li>Banks</li></ol><ol type="a" id="dfcec655-2675-42bd-8eb1-a7e74dd9ed6a" class="numbered-list" start="3"><li>Business</li></ol><ol type="a" id="41d28c6b-43d3-48fe-8164-63af7336c8d1" class="numbered-list" start="4"><li>Industries</li></ol><ol type="a" id="d9a466a4-9d97-43c8-b1ee-ac62b089d9bf" class="numbered-list" start="5"><li>Health Cares</li></ol><ol type="a" id="8bf085f5-bcbc-4ca6-a574-5cba26e7e50a" class="numbered-list" start="6"><li>Agriculture</li></ol><ol type="a" id="2db84c92-0b02-4661-aecc-3cc77e2c7669" class="numbered-list" start="7"><li>Transporation</li></ol><ol type="a" id="6543e5e6-dc52-4566-8e03-2cc4e480ccfe" class="numbered-list" start="8"><li>Entertainment and Sports</li></ol><ol type="a" id="a1d48e45-36c0-4a14-854e-8d9b4a86e7c4" class="numbered-list" start="9"><li>Advertising</li></ol><ol type="a" id="e4b04a15-0c79-4905-96e5-8e8d7a76af48" class="numbered-list" start="10"><li>Science and Engineering</li></ol></li></ol><ol type="1" id="b421f01f-2d3e-426a-9ecb-139ea8d8bd8a" class="numbered-list" start="10"><li>What is an Abacus?</li></ol><ol type="1" id="94372769-74d7-4f4e-97c6-0d45f33f0428" class="numbered-list" start="11"><li>Write in brief about Napier&#x27;s Bones.<p id="df161cf4-7e72-4b9d-bef5-0b93f9168053" class="">This device was developed by a Sottish mathematician, John Napier in 1614 AD. He had also published a book &#x27;Rabdologia&#x27; which was bout logarithm. It consisted the first table of logarithms which was very helpful in simplifying multiplication of large numbers.</p><p id="635b807d-8f7b-41bb-93ca-42413855db03" class="">  Napier&#x27;s Bones considered of a set of bone-rods on which the numbers were engraved. By the combination of these bones, direct multiplication could be done. However, it could be use to divide and extract roots.</p></li></ol><ol type="1" id="47278b97-77af-42fd-b8a5-c59a20ee9b7f" class="numbered-list" start="12"><li>Why is Charles Babbage known as the &#x27;Father of Computer&#x27;?<p id="cf5b9f41-dce4-4b53-b44e-5656b7f20cb7" class="">The concept of input, output, processing, and storage used by Charles Babbage in his analytical engine became the basis for the evaluation of using bits in his machine. Since the dream of modern computers has come true only due to Babbage&#x27;s innovative idea. He is considered as the father of computer science</p></li></ol><ol type="1" id="f34211d6-6a99-48b2-876b-badd4503a580" class="numbered-list" start="13"><li> Who is known as the first programmer in the history of computer science? Why?</li></ol><ol type="1" id="f8659993-28f1-448b-9b35-4f6037521ae1" class="numbered-list" start="14"><li>Write in brief about Napier&#x27;s Bones.<p id="b29a3fc1-d6f1-4e0b-ab60-a6d26ebd8602" class="">This device was developed by a Sottish mathematician, John Napier in 1614 AD. He had also published a book &#x27;Rabdologia&#x27; which was bout logarithm. It consisted the first table of logarithms which was very helpful in simplifying multiplication of large numbers.</p><p id="f83cbd2c-4ab9-4a82-96f8-576f9126ca21" class="">  Napier&#x27;s Bones considered of a set of bone-rods on which the numbers were engraved. By the combination of these bones, direct multiplication could be done. However, it could be use to divide and extract roots.</p></li></ol><ol type="1" id="f4d2e175-a7f5-4878-acde-c4c83811fc2d" class="numbered-list" start="15"><li>Why is Charles Babbage known as the &#x27;Father of Computer&#x27;?<p id="cf5b9f41-dce4-4b53-b44e-5656b7f20cb7" class="">The concept of input, output, processing, and storage used by Charles Babbage in his analytical engine became the basis for the evaluation of using bits in his machine. Since the dream of modern computers has come true only due to Babbage&#x27;s innovative idea. He is considered as the father of computer science</p></li></ol><ol type="1" id="03f28c8c-dc3b-4375-87f9-3b7575340b58" class="numbered-list" start="16"><li> Who is known as the first programmer in the history of computer science? Why?</li></ol><h1 id="72e85daf-88f6-458e-a4de-1a3172d41f56" class="block-color-teal_background">Full Forms</h1><ul id="13178f05-91fb-4c26-aadd-bebcb15cbc66" class="toggle"><li><details open=""><summary>CPU</summary><p id="5853dff5-70ad-4d85-9fc5-9f7f1f85cc96" class="">Central Processing Unit</p></details></li></ul><ul id="63de70b2-7abc-4c6d-a30b-38e98c295a4d" class="toggle"><li><details open=""><summary>IO </summary><p id="d6adac2f-62ae-4358-aa72-079496d4ac63" class="">Input-Output</p></details></li></ul><ul id="68a2e318-f9e9-4e08-8baa-e6de20f8bc2f" class="toggle"><li><details open=""><summary>ALU</summary><p id="2c0f29c2-3783-4300-aa99-9f8fd3753789" class="">Arithmetic Logic Unit</p></details></li></ul><ul id="b374778d-f522-4778-be3e-5ae17bb1f9aa" class="toggle"><li><details open=""><summary>CU</summary><p id="d57e0314-c9a0-438e-a348-e4ea8ca7ba0b" class="">Control Unit</p></details></li></ul><ul id="c7209387-7853-42c6-8a5e-6839979b6718" class="toggle"><li><details open=""><summary>VLSI</summary><p id="0c18170c-5089-46f7-b0e2-27c4d44d4b3f" class="">Very large Scale Integration</p></details></li></ul><ul id="31c90e97-6d8e-4eb5-b36f-f030fe0047d1" class="toggle"><li><details open=""><summary>EDVAC</summary><p id="7ffd4b1f-dc88-4b53-92ab-544c5befcdb7" class="">Electronic Discrete Variable Automatic Computer</p></details></li></ul><ul id="204867e1-ac6f-446f-a651-b4f5e34140cf" class="toggle"><li><details open=""><summary>IPO</summary><p id="127d9ad4-a30a-4855-96b2-6afd23312521" class="">input–process–output</p></details></li></ul><ul id="a130169f-c047-4fdd-aec4-28da5c4e288b" class="toggle"><li><details open=""><summary>DPI</summary><p id="1544a376-a0a2-4f44-b5fa-ab2b3fea477d" class="">Dots per inch</p></details></li></ul><ul id="a446cab7-00a6-41d9-be74-7aab2ba0614b" class="toggle"><li><details open=""><summary>ZB</summary><p id="fbdc79cc-6956-4888-baee-f5595dc192ea" class="">Zetta Byte</p></details></li></ul><ul id="efc2bc1d-318f-4d64-a6cb-9d56ebb755ca" class="toggle"><li><details open=""><summary>IC</summary><p id="016769cc-50bf-40d1-b5bc-8bea0e82bc75" class="">Integrated Circuit</p></details></li></ul><ul id="ff53e4a7-95fc-49a3-ab64-f66d22ff8087" class="toggle"><li><details open=""><summary>AI</summary><p id="d37bae34-9134-4c63-b0aa-76229a44c0af" class="">Artificial Intelligence</p></details></li></ul><ul id="181f0dfc-48f8-464e-b484-f7a2b32d41c8" class="toggle"><li><details open=""><summary>ODL</summary><p id="b9efecc5-fbcb-44d2-a1e2-94fbad4f9619" class="">Open and Distance Learning</p></details></li></ul><ul id="43ee72d2-1905-4e62-a865-39abf3ce8c11" class="toggle"><li><details open=""><summary>MMX</summary><p id="333bf84e-efd4-478e-8515-931d6f0099ac" class="">Multi-Media Extensions</p></details></li></ul><ul id="75e6cc8c-782b-4b9e-bb90-5a0147dba6a7" class="toggle"><li><details open=""><summary>GUI</summary><p id="082c64bc-b588-4e86-8f33-ae524c2ba0dd" class="">Graphical User Interface</p></details></li></ul><ul id="dbf4c850-d443-4520-ab10-567c32b9038e" class="toggle"><li><details open=""><summary>ABC</summary><p id="9aeca155-aee1-4156-a713-9779e9a3075b" class="">Atanasoff-Berry Computer</p></details></li></ul></div></article></body></html>

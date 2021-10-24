@@ -1,0 +1,646 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Force</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e61db6bd-2fff-4c30-b88b-1461ea1539ca" class="page sans"><header><img class="page-cover-image" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Purple_Halloween_Birthday_Party_Facebook_Event_Cover_Photo_(3).png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Pink_and_Purple_Window_90s_Anime_PartyDancePop_Playlist_Cover_(2).png"/></div><h1 class="page-title">Force</h1></header><div class="page-body"><ol type="1" id="391e5574-d8f1-4bd8-b6ad-75d3755a8457" class="numbered-list" start="1"><li>What do you understand by distance and displacement? Give three different features of them.<p id="760ea339-48f1-40fe-9b31-3972b834412d" class="">The actual length of the path covered by a body is called distance. It is a scalar quantity.</p><p id="ca75e333-6449-475f-8683-c5e27e187441" class=""> The shortest distance covered by a body in a particular direction is called displacement. It is vector quantity.</p></li></ol><ol type="1" id="dc1b768d-4bd6-41d3-a15c-9dadefa98281" class="numbered-list" start="2"><li>Define velocity. What is its unit? 3. What is meant by acceleration? What is its unit?<p id="7c655071-4603-475c-b7c1-a04d9e0906f3" class="">Velocity can be defined as the distance travelled by a body per unit time in a given direction is known as velocity. <mark class="highlight-yellow"><em><strong>Meter per second or m/s or m s⁻¹ where m/s is the SI base unit of velocity.</strong></em></mark></p><figure id="3a407961-e04c-44b4-a334-a14c2eaab8a2" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>i</mi><mi mathvariant="normal">.</mi><mi>e</mi><mo separator="true">,</mo><mi>V</mi><mi>e</mi><mi>l</mi><mi>o</mi><mi>c</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>=</mo><mi>D</mi><mi>i</mi><mi>s</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>c</mi><mi>e</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">/</mi><mi>T</mi><mi>i</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>a</mi><mi>k</mi><mi>e</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">i.e, Velocity=Displacement/ Time taken</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">i</span><span class="mord">.</span><span class="mord mathnormal">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">oc</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.01968em;">pl</span><span class="mord mathnormal">a</span><span class="mord mathnormal">ce</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">im</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">ak</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span></span></span></span></span></div></figure><p id="53f72cad-df99-4179-ab35-867d93d66e68" class="">The rate of change of velocity with time is known as acceleration. <mark class="highlight-yellow"><strong><em>Unit of acceleration is the metre per second per second (m/s2).</em></strong></mark></p></li></ol><ol type="1" id="8e28ba0c-d8f4-4b78-8d39-dff65f4d27d2" class="numbered-list" start="3"><li>What are scalar and vector quantities? Give two examples of each.<p id="9fc9b49f-a365-4b6b-a096-6d47fc803ba1" class="">Those physical quantities which have only the magnitude but no direction are called scalar quantities.</p><p id="ab6b034b-bb31-4624-9b7c-1f682a11e5e3" class=""> <mark class="highlight-yellow"><em><strong>Examples: distance, time, length, mass, density, temperature, speed.</strong></em></mark></p><p id="62770752-e8fe-44f5-9e6b-586bf5fd4817" class="">Those physical quantity which have both magnitude as well as direction are called vector quantities.</p><p id="3f3c61ed-4082-4da2-b71c-90fed57f29d9" class=""><mark class="highlight-yellow"><em><strong> Examples: weight, displacement, force, work, acceleration.</strong></em></mark></p></li></ol><ol type="1" id="2eba8893-7200-4851-bf07-916d5aedca96" class="numbered-list" start="4"><li>What do you understand by uniform acceleration? Give one example.<p id="85c05747-5d8c-4cf9-a716-3dfc9c5ad37a" class="">If the velocity of a body changes by equal amounts, in equal interval of time the body is said to have a uniform acceleration.</p><p id="f413e504-4f74-40a2-8a18-41fdbc95df94" class=""> Considered a car moving along a straight path. The initial velocity of the car is 10m/s. After an interval of 1s, its velocity is 15m/s and after another interval the velocity becomes 20m/s and so on. Then the velocity of the car is changing by 5m/s, in each interval of time.</p></li></ol><ol type="1" id="0b937779-23f1-4dbf-8715-dbff9952ea07" class="numbered-list" start="5"><li>What is the acceleration of a body moving with a uniform velocity?<p id="ef5944ce-3867-4e75-9bb7-340989e158d0" class="">The acceleration of body moving with uniform velocity is zero, because there is no change in velocity.</p></li></ol><ol type="1" id="fcf48dcf-aac6-4aff-ad67-c9aa1f9a32c8" class="numbered-list" start="6"><li>What is retardation? Give one example.<p id="2fa59ef1-84c7-4bc7-8b8c-30c7268c58dc" class="">The decrease of velocity per unit of time is called retardation. </p><figure id="651dd8c3-b606-491f-b98b-c15f17fa9ce9" class="image"><a href="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled.png"><img style="width:580px" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled.png"/></a></figure><p id="e12592b0-2c56-46ba-88b5-c2b5383bc9ce" class="">In the given figure, the vehicle has covered 5 m in the first second. After that, it has covered 10 m, 15 m and 20 m in the 2nd, 3rd and 4th second respectively. In this way, the velocity of the vehicle is increasing by 5 metre per second (5 m/s). Hence, the vehicle has 5 m/s2 acceleration.
+    In the above figure, the increasing velocity has been shown. If the initial  velocity is more than the final velocity, the velocity goes on decreasing. The decreasing rate of velocity in per unit time is known as retardation.</p></li></ol><ol type="1" id="d384b96e-5d73-4ef5-bb6e-79ea4aaacdca" class="numbered-list" start="7"><li>Define inertia of rest. Give two suitable examples.<p id="782b9325-9936-4f98-9ac4-7f39e7511c5d" class="">Inertia of rest is the inability of a body at rest to change its state of rest by iteself.</p></li></ol><ol type="1" id="733b933e-b542-4974-960c-f2318281c9af" class="numbered-list" start="8"><li>How can you define inertia? Does it depend on mass? </li></ol><ol type="1" id="77ce3891-5dea-4d2a-86e7-ba8b0d624f3f" class="numbered-list" start="9"><li>Define balanced and unbalanced forces.<p id="8ccca1a4-5ddf-4baf-9899-ca75e9fc79a5" class=""><mark class="highlight-yellow"><strong><em>If resultant of the applied forces on an object is zero, such forces are  called balanced forces.</em></strong></mark> Balanced forces can’t bring a body into motion. For example; in the game tug of war, the rope remains steady if both the team apply equal force to the opposite direction</p><p id="4caeb340-e3ca-49d4-8633-6275ae5dd093" class="">   <mark class="highlight-yellow"><strong><em>If resultant of the applied forces on an object does not become zero, such forces are called imbalanced forces. </em></strong></mark>Imbalanced forces bring an object into motion. While pushing a bicycle, frictional force creates obstruction to bring it into motion but our force is more than the frictional force and hence motion is produced in the bicycle. At this time, the resultant of the applied forces in the bicycle does not become zero.</p></li></ol><ol type="1" id="7c769d38-fe10-477c-89d4-1d4658343556" class="numbered-list" start="10"><li>State Newton&#x27;s first law of motion.<p id="5bfa2252-579e-42e1-9a56-b6ffd7f728c8" class="">Newton’s first law states that ‘everybody continues in its state of rest or of uniform motion in a straight line unless an unbalanced force acts on it.’ Examples:</p><ol type="1" id="5fed7d51-1a84-4d21-8608-dca20def8b1d" class="numbered-list" start="1"><li>When we shake mango tree, the mangoes fall down.</li></ol><ol type="1" id="9ad397c4-2516-4c61-b514-9bfdd4f61587" class="numbered-list" start="2"><li>When a blanket is given a sudden jerk, the dust particles in it fall off due to inertia at rest.</li></ol><ol type="1" id="625d59f5-baec-4cee-ad2f-b8c2e40e307f" class="numbered-list" start="3"><li>A rider on a running horse is thrown forward when the horse stops suddenly due to the inertia of motion.</li></ol><ol type="1" id="12ab6d79-7dc3-49a0-b356-0be5d4604b86" class="numbered-list" start="4"><li>When a person jumps out of a moving vehicle, he falls forward due to the inertia of motion.</li></ol></li></ol><ol type="1" id="d6ec9fca-bfe3-4df6-8034-ca37f51c4ece" class="numbered-list" start="11"><li>Newton Law Examples<ul id="a8aff1b7-3bf6-4b0d-afe8-a946ff528767" class="toggle"><li><details open=""><summary>First Law</summary><ol type="1" id="e391094c-7737-46d9-91cb-ababce4f9c30" class="numbered-list" start="1"><li>When we shake mango tree, the mangoes fall down.</li></ol><ol type="1" id="668745a9-9a7e-4b53-8a88-5da1e98676dc" class="numbered-list" start="2"><li>When a blanket is given a sudden jerk, the dust particles in it fall off due to inertia at rest.</li></ol><ol type="1" id="38240af3-6d5d-4597-b3b2-6a048cb10191" class="numbered-list" start="3"><li>A rider on a running horse is thrown forward when the horse stops suddenly due to the inertia of motion.</li></ol><ol type="1" id="2bad1e3d-8f26-461f-8929-2f476b318af0" class="numbered-list" start="4"><li>When a person jumps out of a moving vehicle, he falls forward due to the inertia of motion.</li></ol></details></li></ul><ul id="c92caf0e-cbaa-40ca-9ce9-48d03bfc983c" class="toggle"><li><details open=""><summary>Second Law</summary><ol type="1" id="d0166096-62f3-4f66-ac77-01e54482303c" class="numbered-list" start="1"><li>A cricket player while catching a ball moves his hands backwards.</li></ol><ol type="1" id="1c5d4138-9047-46a9-a876-3acf659c2a3e" class="numbered-list" start="2"><li>A person falling on the cemented floor is injured more than a person falling on a sandy floor or mattress.</li></ol><ol type="1" id="14e0d5fe-dd40-484c-bb29-474ecdb4b8e1" class="numbered-list" start="3"><li>It is difficult to catch a cricket ball as compared to a tennis ball moving at the same velocity.</li></ol><ol type="1" id="8dc759ef-cb93-4806-a14d-b54819c1fb19" class="numbered-list" start="4"><li>It is easier to drag a stone than to kick.</li></ol></details></li></ul><ul id="0fb53d74-1e10-4e8c-a0ca-40d5b1d325cc" class="toggle"><li><details open=""><summary>Third Law</summary><ol type="1" id="771bd967-4aed-4ebd-8508-9961f01e4d7b" class="numbered-list" start="1"><li>While rowing a boat, a person pushes water backwards with the help of the oars. Due to the reaction offered by water, the boat moves forwards.</li></ol><ol type="1" id="a0595224-c19e-4353-b806-9ab1a0559b09" class="numbered-list" start="2"><li>Birds, while flying, push air with their wings (action). The air exerts an equal and opposite force on the birds (reaction) and that force causes birds to move forward.</li></ol><ol type="1" id="bc90c985-7d17-4aa7-9156-0ef9d36be521" class="numbered-list" start="3"><li>In order to swim, a man pushes water backwards with his hands. Due to the reaction offered by water to the man, the man is pushed forwards.</li></ol><ol type="1" id="58881cf7-431b-4273-b77f-4fc343314c1e" class="numbered-list" start="4"><li>When the mouth of an inflated balloon is left open, the balloon flies away. This is because when the air inside escapes out (action), the balloon gets pushed (reaction) in the opposite direction by the air escaping out.</li></ol></details></li></ul></li></ol><ol type="1" id="aa765092-4c2f-4d0e-b224-9bc286f99688" class="numbered-list" start="12"><li>Give an example of motion in which speed is constant but velocity is variable.<p id="8fcde977-b7b2-426b-98f7-d470fac62170" class="">The motion of a body in a circular path with uniform speed has a variable velocity because in the circular path, the direction of motion of the body continuously changes with time.</p><figure id="8b8b2687-aa68-4729-9620-96851df1b1f3" class="image"><a href="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%201.png"><img style="width:219px" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%201.png"/></a></figure></li></ol><ol type="1" id="99885196-59ea-41c7-90c7-ba6ac2d00dee" class="block-color-yellow numbered-list" start="13"><li>Why is Newton&#x27;s first law also called the law of inertia?<p id="21ebbdda-14e4-4cc3-8528-d7a004a5a207" class="">An object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force.</p></li></ol><ol type="1" id="b11c084b-9d08-4548-9e8c-8b7ca54b1f2f" class="numbered-list" start="14"><li>State Newton&#x27;s second law of motion.<p id="4c51abbe-401c-496e-98c3-a6b683823cc5" class="">Newton’s second law of motion states that ‘acceleration produced in a body is directly proportional to the force applied to it in the direction of motion and inversely proportional to its mass.’ Example:</p><ol type="1" id="397d6b1d-a879-43a5-8837-3036d4485531" class="numbered-list" start="1"><li>A cricket player while catching a ball moves his hands backwards.</li></ol><ol type="1" id="6e6f9022-b4b0-4670-988f-021e7f08d509" class="numbered-list" start="2"><li>A person falling on the cemented floor is injured more than a person falling on a sandy floor or mattress.</li></ol><ol type="1" id="477f8b85-584b-49c2-9483-8da9e3b62782" class="numbered-list" start="3"><li>It is difficult to catch a cricket ball as compared to a tennis ball moving at the same velocity.</li></ol><ol type="1" id="aaf5c808-2958-4c7f-9b10-9928a28e7abe" class="numbered-list" start="4"><li>It is easier to drag a stone than to kick.</li></ol></li></ol><ol type="1" id="8f73b2ea-f8df-43ff-acd8-f173c7ca1233" class="numbered-list" start="15"><li>State Newton&#x27;s third law of motion<p id="11fb736a-80cc-4df9-9096-029a6f04f2f1" class="">Newton’s third law of motion states that ‘to every action there is equal and opposite reaction.’ Example:</p><ol type="1" id="33721b2c-2729-4f9f-9f79-f8b076716719" class="numbered-list" start="1"><li>While rowing a boat, a person pushes water backwards with the help of the oars. Due to the reaction offered by water, the boat moves forwards.</li></ol><ol type="1" id="fb0ff1f3-a792-4215-b058-aea96a2b3d27" class="numbered-list" start="2"><li>Birds, while flying, push air with their wings (action). The air exerts an equal and opposite force on the birds (reaction) and that force causes birds to move forward.</li></ol><ol type="1" id="6f3411c3-361e-4622-aaac-f55452e8b299" class="numbered-list" start="3"><li>In order to swim, a man pushes water backwards with his hands. Due to the reaction offered by water to the man, the man is pushed forwards.</li></ol><ol type="1" id="fbb99f00-d2ed-4004-b830-58e4d3144a34" class="numbered-list" start="4"><li>When the mouth of an inflated balloon is left open, the balloon flies away. This is because when the air inside escapes out (action), the balloon gets pushed (reaction) in the opposite direction by the air escaping out.</li></ol></li></ol><ol type="1" id="e6f055b8-8f1c-4c1f-ba51-2452f80121c5" class="numbered-list" start="16"><li> What do you understand by force of 1N?<p id="25a69900-dde8-48b9-8a85-a4c605ad9950" class="">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</p></li></ol><ol type="1" id="2eb2f776-70ab-4e9e-9241-c12bdd6771e0" class="block-color-yellow numbered-list" start="17"><li>A moving fan continues to move after switch off. Why?<p id="b85d1362-087e-4a7e-b30d-c6e750b6eae9" class="">A moving fan continues to move after off due to the inertia of motion. Thus, the fan continues to move for some time even after switching it off.</p></li></ol><ol type="1" id="5b3cdddf-d84f-4f6e-85b3-9afce4aec3ef" class="numbered-list" start="18"><li> Explain why it is dangerous to jump out of a moving bus.<p id="d6e0b77a-28dd-4348-80c2-4f9a368056f0" class="">A man jumping out from a moving bus holds the inertia of motion. As the man lands on the ground, feet come to rest instantly while the upper part of the body continue to move due to inertia of motion.  So, it is very dangerous to jump out of a moving bus.</p></li></ol><ol type="1" id="be8f544b-02f6-4f7c-92d7-2464e4167965" class="numbered-list" start="19"><li>Two bodies of mass 50 kg and 100 kg are at rest. Which body needs more force to be started?<p id="89b2531c-2aa5-4a6d-b418-4551c3f290c1" class="">100 KG</p></li></ol><ol type="1" id="bdbffaee-d1d4-43e3-b198-18799e067852" class="block-color-yellow numbered-list" start="20"><li>Define inertia of rest. Give two suitable examples.<p id="9ad35301-5b02-4b94-8cac-03515f4580f8" class="">Inertia of rest is the property of a body by virtue of which it is unable to change its state of rest without an application of some external force.</p></li></ol><ol type="1" id="eb1083da-2d5d-4867-916e-e833a9e92709" class="numbered-list" start="21"><li>How can you define inertia? Does it depend on mass? </li></ol><ol type="1" id="1c8b0a09-f6df-4260-beff-565c0576ae6c" class="numbered-list" start="22"><li>We beat our coat with a stick to remove dust particles from it. Why?<p id="b9c1d121-48e0-4266-bbfb-9e4a922b9bdf" class="">We beat our coat with a stick to remove dust particles from it because when we beat blanket with stick it comes into motion. But, the dust particles remain at rest due to inertia and get detached from the blanket.</p></li></ol><ol type="1" id="ae39a847-3614-4d3f-8bd4-9d97f5614b70" class="block-color-yellow numbered-list" start="23"><li>On which law is swimming based? Explain. <p id="b9398e74-53d0-4d11-ae14-567d4ddaf829" class="">Newton&#x27;s Third Law of Motion states that for every action, there is an equal and opposite reaction.</p></li></ol><ol type="1" id="83374b35-af55-45b8-8be0-7eff0f111424" class="block-color-yellow numbered-list" start="24"><li>Define balanced and unbalanced forces.<p id="af2bec1b-4ab3-4ad6-ba40-bcc84da25929" class=""><mark class="highlight-yellow"><strong><em>If resultant of the applied forces on an object is zero, such forces are  called balanced forces.</em></strong></mark> Balanced forces can’t bring a body into motion. For example; in the game tug of war, the rope remains steady if both the team apply equal force to the opposite direction</p><p id="4764b879-0412-4c1a-9dab-25b73ebe1f93" class="">   <mark class="highlight-yellow"><strong><em>If resultant of the applied forces on an object does not become zero, such forces are called imbalanced forces. </em></strong></mark>Imbalanced forces bring an object into motion. While pushing a bicycle, frictional force creates obstruction to bring it into motion but our force is more than the frictional force and hence motion is produced in the bicycle. At this time, the resultant of the applied forces in the bicycle does not become zero.</p></li></ol><ol type="1" id="07084f76-b670-41ab-9365-b7659982263f" class="numbered-list" start="25"><li>A person standing in a moving bus falls forward when suddenly brakes are applied. Why?<p id="761f7a3b-ef07-43cd-bf2c-cfdf51d5c405" class="">As the driver applies brakes, the bus comes to rest. But, the passenger tries to maintain the inertia of motion. As a result, a forward force is exerted on him. Similarly, the passenger tends to fall back when the bus accelerates from rest because when the bus accelerates, the passenger’s inertia tends to oppose the bus’s forward motion. Hence, the passenger tends to fall back when the bus accelerates forward.</p></li></ol><ol type="1" id="f364ab2c-fd15-402e-b3a7-98abe08d1326" class="numbered-list" start="26"><li><mark class="highlight-yellow">A person falling on a concrete floor gets more injuries than someone falling on a sand pile. Why?</mark><figure id="366d1ed8-3228-4bd8-9973-895854ded3e7" class="image"><a href="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%202.png"><img style="width:765px" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%202.png"/></a></figure></li></ol><ol type="1" id="74a0149a-c178-4d5d-9851-7d29503b6398" class="numbered-list" start="27"><li><mark class="highlight-yellow">While catching a ball a cricket player moves his hand backwards.  Why?</mark><figure id="f2095759-add5-45e9-b23e-1e50ecce6e0f" class="image"><a href="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%203.png"><img style="width:743px" src="Force%20e61db6bd2fff4c30b88b1461ea1539ca/Untitled%203.png"/></a></figure></li></ol><ol type="1" id="00f7cc02-3833-4aaf-abe7-597845a3798d" class="numbered-list" start="28"><li>The seats of automobiles are provided with a spring system. Why?<p id="fd281717-dd67-4833-86a3-aeaa64607da0" class="">Automobiles are provided with spring system because when an automobile moves on uneven roads, it receives a jerk. Spring system increases the time of impact and hence reduces the jerk and minimizes the damages.</p></li></ol><ol type="1" id="c0b6882b-7ccd-4b62-b006-8a6695564dfe" class="numbered-list" start="29"><li>In wrestling a soft floor is provided. Why?<p id="a685c1d8-6b14-42f8-afbe-aba46254b806" class="">In Wrestling Soft floor is provided because in hard floor the time of impact increases as a result the rate of change of momentum increases which means more force and then from Newton&#x27;s third law the reaction force of floor also increases and wrestler get more injuries and damages.</p></li></ol></div></article></body></html>

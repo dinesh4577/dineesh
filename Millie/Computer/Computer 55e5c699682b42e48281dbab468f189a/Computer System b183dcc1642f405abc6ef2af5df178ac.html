@@ -1,0 +1,646 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Computer System</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b183dcc1-642f-405a-bc6e-f2af5df178ac" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="Computer%20System%20b183dcc1642f405abc6ef2af5df178ac/Pink_and_Purple_Window_90s_Anime_PartyDancePop_Playlist_Cover_(8).jpg"/></div><h1 class="page-title">Computer System</h1></header><div class="page-body"><ol type="1" id="b35860bc-c716-4e9e-8f8b-65a8db1f78fc" class="numbered-list" start="1"><li>Define a computer system.<p id="028e1d0c-b611-44d7-9b8f-415552a04bfa" class="">The integration of input unit, processing unit, output unit along with necessary software working together to perform the certain task is known as computer system.</p></li></ol><ol type="1" id="057ca286-5aa6-4a5d-b01b-8635f3fefa86" class="numbered-list" start="2"><li>List the different components of the computer system.<p id="2b6ae743-dfcd-4a88-84c8-9ebc2d52e13e" class="">There are five main hardware components in a computer system: Input, Processing, Storage, Output and Communication devices. Are devices used for entering data or instructions to the central processing unit.</p></li></ol><ol type="1" id="360d987e-bf99-4a9d-a443-6dbba3cf1a69" class="numbered-list" start="3"><li>Define computer hardware with examples.<p id="6db68791-17cb-4b6e-b1d2-7fc953bd5a68" class="">Computer hardware is the physical components that a computer system requires to function.</p></li></ol><ol type="1" id="934aa9e9-25d5-42e4-9e3b-868a987ebd8a" class="numbered-list" start="4"><li>Define computer software with examples.<p id="8cff4a4c-e504-41a9-b167-ffc3f4d41be9" class="">The software is the collection of program that makes the computer work. In another word, it is the set of program that operates and control hardware and performs the specific task. Types of software are:</p><ol type="1" id="dcf2a72b-8c4d-494e-bd1b-d743770fd616" class="numbered-list" start="1"><li>System Software</li></ol><ol type="1" id="3aa22ac6-52be-4486-949d-7cee9c7b7325" class="numbered-list" start="2"><li>Application Software</li></ol></li></ol><ol type="1" id="0c0eabc4-27a1-4002-a6d1-0f8422317e5e" class="numbered-list" start="5"><li>What are the different types of computer hardware?</li></ol><ol type="1" id="d0bcb5c2-bc0e-494b-be6b-834c1347946e" class="numbered-list" start="6"><li>Explain the input unit in brief with examples.<p id="aae680f4-188f-4fd0-9099-03a0d2ec5f42" class="">The user interacts with the computer via the I/O unit. The input units are used to provide the instruction to computer. They accept data from the user and convert the data into a form that is understandable by the computer. The input is provided to computer using input devices like keyboard, trackball, mouse, scanner, microphone, etc.</p></li></ol><ol type="1" id="716eb338-4c12-4aa6-80b9-40cd0888a1fc" class="numbered-list" start="7"><li>What is an output unit? Give example.<p id="bf1a1054-4fa3-4c9e-936e-57ba1a7d7c44" class="">The user interacts with the computer via the I/O unit. The output unit provides the result as output in a form that is understandable by the user. Outputs are provided through the output devices like monitors and printers. Such output can also be stored in the storage devices like Hard disk, floppy disk, CD ROM, DVD ROM, flash drive (pen drive), etc.</p></li></ol><ol type="1" id="d109353a-d143-4b41-93f2-25e54fd038c1" class="numbered-list" start="8"><li>What is the function of CPU? List its different sections.<figure id="b697daf9-4f27-4239-ac7c-7354faa5cbe4" class="image"><a href="Computer%20System%20b183dcc1642f405abc6ef2af5df178ac/Untitled.png"><img style="width:570px" src="Computer%20System%20b183dcc1642f405abc6ef2af5df178ac/Untitled.png"/></a></figure></li></ol><ol type="1" id="3f9b5d87-4857-4e20-a6c9-3e13e8d00a6f" class="numbered-list" start="9"><li>What is memory unit?<p id="ec34c94c-7eaa-462e-b096-766dd3eed4bb" class="">Memory unit is a component of a computer system. It is used to store data, instructions and information. It is also known as a main/primary/internal memory. </p><p id="89a0e692-84c8-44f9-97c4-24084c0b2cfb" class="">There are two key types of primary memory: RAM, or random access memory. ROM, or read-only memory.</p><figure id="e823e027-bcfa-4af1-9a5c-622ed7076445" class="image"><a href="Computer%20System%20b183dcc1642f405abc6ef2af5df178ac/Untitled%201.png"><img style="width:736px" src="Computer%20System%20b183dcc1642f405abc6ef2af5df178ac/Untitled%201.png"/></a></figure></li></ol><ol type="1" id="79eecc49-b9bf-4c3c-80c7-45749853bf5f" class="numbered-list" start="10"><li>Define a register.<p id="489cf359-d3b8-47a2-a5b6-b80a478f40d4" class="">A processor register (CPU register) is one of a small set of data holding places that are part of the computer processor.</p></li></ol><ol type="1" id="d9a7ed77-67a2-4623-8110-af2c296249c1" class="numbered-list" start="11"><li>What is booting?<p id="dd5b3205-231f-4f2c-b823-9e3a49db09b3" class="">The process of loading system files into computer&#x27;s memory from disk is called booting.</p><p id="5b141266-3f8e-4e7f-8df1-e0dc0335fcbe" class="">It starts when the computer is turned on. It makes computer ready to work. In the booting process, the command interpreter and system files are loaded into computer memory. There are two types of booting: Cold booting and warm booting</p></li></ol><ol type="1" id="264c37a8-bc69-48f6-9c8d-a71e1ea83cfc" class="numbered-list" start="12"><li>What is ALU?<p id="dee38020-e9bc-4609-b0b4-30cf6ec296ba" class="">An arithmetic-logic unit (ALU) is the part of a computer processor (CPU) that carries out arithmetic and logic operations on the operands in computer instruction words.</p><p id="4f859e0d-0e20-4b85-b84a-b74cf833a2ca" class="">
+</p><h3 id="b8c56be8-97b3-4969-bbda-0b137747a556" class="block-color-blue_background">Full Forms</h3><ul id="0b7964a8-485f-4dca-bd31-d6af028c1899" class="toggle"><li><details open=""><summary>MHz</summary><p id="b4d70185-26bb-4b9c-af66-2ee18e37de2f" class="">megahertz</p></details></li></ul><ul id="fc62a5f3-4205-43b0-a681-682a0f44009c" class="toggle"><li><details open=""><summary>MIPS</summary><p id="d2ba876a-6ac2-4654-9d3a-294568847d83" class="">Million instructions per second</p></details></li></ul><ul id="d0fe7ec1-0e8d-4713-aa52-65be3a0d9265" class="toggle"><li><details open=""><summary>ASCII</summary><p id="ca6d613f-06ab-4f28-a30d-ef06a1e97299" class="">American Standard Code For Information Interchange</p></details></li></ul><ul id="44b867cd-01f0-4b32-a904-65bee755c07c" class="toggle"><li><details open=""><summary>RAM</summary><p id="7135059c-9a68-4e31-bf66-2e3d0c78bbc4" class="">Random Access Memory</p></details></li></ul><ul id="468a0035-453f-4b1e-931c-18bf1abaadd7" class="toggle"><li><details open=""><summary>DRAM</summary><p id="15d1798d-3adb-477e-b3b1-aa459b37d2b9" class="">Dynamic random-access memory</p></details></li></ul><ul id="1c0d4314-d470-41df-b680-6b113414446e" class="toggle"><li><details open=""><summary>EPROM</summary><p id="1705252d-9eed-49cd-8d9d-cd5f92783b4e" class="">Erasable programmable read-only memory</p></details></li></ul><ul id="e3414387-b473-47b4-9bf4-aa289d6a6a48" class="toggle"><li><details open=""><summary>CU</summary><p id="60638bb2-218d-4fc5-937e-b8c41393556a" class="">Control Unit</p></details></li></ul><ul id="5302f0e0-0b0c-4195-9765-55107e004d5b" class="toggle"><li><details open=""><summary>AC</summary><p id="e56f942d-1203-4803-b6b0-1bfee877782e" class="">Alternating current</p></details></li></ul><ul id="e2a0e558-f41b-4408-801a-32c6f8b57343" class="toggle"><li><details open=""><summary>ALU</summary><p id="6fe86540-4b86-4001-a0c3-aa46e343c19b" class="">Arithmetic and Logic Unit</p></details></li></ul><ul id="0401d81f-3611-4f23-81b0-27958b6ad74a" class="toggle"><li><details open=""><summary>DVD ROM</summary><p id="9753173f-bd46-4d55-93d6-84f7e5ae20a3" class="">Digital Versatile Disk-Read Only Memory.</p></details></li></ul><ul id="659c92a6-b56d-4d0e-821d-19274edb8fbd" class="toggle"><li><details open=""><summary>CD ROM</summary><p id="0113dcfc-141a-487d-84fc-a749b105eae2" class="">Compact disc read-only memory</p></details></li></ul><ul id="d4dd7f45-c1bd-45dd-8979-326b497d7bcf" class="toggle"><li><details open=""><summary>UPS</summary><p id="03305ea5-3829-4f92-bef6-77164dffd569" class="">Uninterruptible power source</p></details></li></ul></li></ol></div></article></body></html>
