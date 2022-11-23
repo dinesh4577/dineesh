@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Pressure-Very Short Q &amp; A</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d836b7fd-16ce-4f98-82dd-46a1442899a7" class="page sans"><header><h1 class="page-title">Pressure-Very Short Q &amp; A</h1></header><div class="page-body"><ul id="d16cffa6-479a-4679-b392-594f33745275" class="toggle"><li><details open=""><summary>Define pressure</summary><p id="b0054c16-d3ba-414f-a81d-14fc1f872942" class="">Pressure can be defined as the force acting perpendicularly on a unit area of a surface. Its SI unit is Pascal (<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><msup><mi>m</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N/m^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>.</p></details></li></ul><ul id="4277f1b4-9fdd-4273-9cf0-674273d29b42" class="toggle"><li><details open=""><summary>What is one-pascal pressure?</summary><p id="f52f46df-3e74-49ee-bc73-ea5e86b056a4" class="">One pascal pressure is the pressure exerted on a surface of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1m^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> area by the thrust of 1N.</p></details></li></ul><ul id="554ee247-88d7-40b7-b812-52bd47491e71" class="toggle"><li><details open=""><summary>State Pascal’s law of liquid pressure.</summary><p id="a3d4e070-65e3-4dbc-8983-45676c28fbdb" class="">Pascal’s law of liquid pressure states “ The pressure is equally transmitted perpendicularly on all sides as pressure is applied in a liquid kept in a closed container.”</p></details></li></ul><ul id="9a68d131-3d8e-4428-8493-a89e4933052e" class="toggle"><li><details open=""><summary>Name the factor, on which the pressure depends.</summary><ol type="1" id="2530d1a5-178e-47ac-ad43-3f261c9a116b" class="numbered-list" start="1"><li>Force exerted on a body.</li></ol><ol type="1" id="0acda017-58a0-4cce-bf10-70513533b9ca" class="numbered-list" start="2"><li>Area on which force is applied.</li></ol></details></li></ul><ul id="280ca048-d2bb-4249-a86e-893e4953c7d3" class="toggle"><li><details open=""><summary>Name any two equipment which are based on pascals law of liqud pressure.</summary><ol type="1" id="8e31da36-702d-4aa0-b853-1e380f056f69" class="numbered-list" start="1"><li>Hydraulic garage lift.</li></ol><ol type="1" id="ddfa8787-6108-4206-b9c6-e647df5ca5f9" class="numbered-list" start="2"><li>Hydraulic brakes.</li></ol></details></li></ul><ul id="e71d8071-6abe-45b2-b174-66718688d196" class="toggle"><li><details open=""><summary>What is upthrust? Write down its SI unit.</summary><p id="746a794d-e102-43c7-a6a3-893478678b6a" class="">The resultant force with which a liquid pushes object upwards when placed in it is called upthrust or buoyant force.</p><p id="0ddf54e7-5e3c-4159-be9e-303ba8f64d72" class="">Upthrust is defined as the resultant force that a liquid used to push up a body which is immersed in the liquid.</p><p id="b54f9f84-7ec3-4dd6-97ab-dec05b187f2b" class=""> It is a vector quanitity. It’s SI unit is Newton(N).</p></details></li></ul><ul id="87e86378-9b7e-495d-986f-b99cdbcc0fcd" class="toggle"><li><details open=""><summary>Write the formula based on pascal’s law.</summary><figure id="d2e871cf-81c0-4c35-8c07-2f82761314c3" class="image"><a href="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled.png"><img style="width:316px" src="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled.png"/></a></figure></details></li></ul><ul id="d6908d12-20f8-47fd-a86d-6d188612e241" class="toggle"><li><details open=""><summary>State law of flotation. Name any onen instrument which is constructed on the basis of this law.</summary><p id="1889557e-f9d8-421a-93ad-95f6e149b392" class="">Law of flotation states “ An object that floats on liquid medium displaces the liquid equal to its own weight.”</p><p id="41e24c59-fbbd-4a83-9c96-59520d57a046" class="">  A hydrometer is constructed on the basis of law of floatation.</p></details></li></ul><ul id="9a586543-679b-4b45-a163-e66286f2c5e7" class="toggle"><li><details open=""><summary>Weight of an object is decreased when immersed in water, which law does this statement represent?</summary><p id="5b4ef1c0-16f2-4fd4-a789-de6c2b2d2214" class="">This statement represents Archimedes’ principle.</p></details></li></ul><ul id="905156a2-417a-498c-97ed-bc4d2572b645" class="toggle"><li><details open=""><summary>What is relative density? Write down its formula</summary><p id="f653bd98-9809-4425-bc04-bcb386c01531" class="">Relative density of a substance is the ratio of the density of a substance to the density of water at <code><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>C</mi></mrow><annotation encoding="application/x-tex">4C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span><span>﻿</span></span></code></p><figure id="6d92f537-e376-4b8f-8ba5-5ae2ba0ef1d9" class="image"><a href="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%201.png"><img style="width:437px" src="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%201.png"/></a></figure></details></li></ul><ul id="96ae0489-33f7-4093-bac7-fc10b3f10b85" class="toggle"><li><details open=""><summary>What is  density? Write down it’s formula</summary><p id="af7c515c-aafa-4bbe-b1a0-b0a13822b3a1" class="">It is defined as the mass per unit volume of a substance.</p><p id="f7bb2b2f-a4c4-4f2b-bb44-e2af0f8bf153" class=""> Its SI unit is <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>g</mi><mi mathvariant="normal">/</mi><msup><mi>m</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">kg/m^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="a9a08d9e-d046-4a6a-a52b-d754e525269c" class="toggle"><li><details open=""><summary>State Archimedes’s principle.</summary><p id="7695c80e-42ce-453e-b7a8-1cf6285cffc8" class="">Archimedes&#x27; principles states “ When a body is partially or wholly immersed in a fluid, it experiences an upthrust which is equal to the weight of fluid displaced by it.”</p></details></li></ul><ul id="dff189ba-e4eb-4556-9ffb-aa3f27585144" class="toggle"><li><details open=""><summary>Write down the relation between the upthrust and volume of the displaced liquid.</summary><p id="9e4caf99-1dff-4d33-8506-3c70503dada6" class="">Upthrust is directly proportional to the volume of displaced liquid.</p><figure id="06346c20-6c2e-439f-8f0d-a3252d74f8c2" class="image"><a href="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%202.png"><img style="width:347px" src="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%202.png"/></a></figure></details></li></ul><ul id="0aad96f6-b654-4597-9576-f41ac1722519" class="toggle"><li><details open=""><summary>What is the relation between upthrust and density of a liquid?</summary><p id="0e399c3d-fe25-431c-894d-7ff0a10dd771" class="">Upthrust is directly proportional to the density of a liquid.</p><figure id="33bfc21b-4b9c-44d6-91f3-61119916060b" class="image"><a href="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%203.png"><img style="width:238px" src="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%203.png"/></a></figure></details></li></ul><ul id="b5f23f51-3386-4536-bb43-cdcdcab0843e" class="toggle"><li><details open=""><summary>What is relation between upthrust and value of acceleration due to gravity\</summary><p id="3be91b4b-2b6b-4fae-8a55-53a55c164be6" class="">Upthrust is directly proportional to acceleration due to gravity.</p><figure id="3f606dc6-f1ec-4f3d-9469-eabb3fe3e3fc" class="image"><a href="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%204.png"><img style="width:119px" src="Pressure-Very%20Short%20Q%20&amp;%20A%20d836b7fd16ce4f9882dd46a1442899a7/Untitled%204.png"/></a></figure></details></li></ul><ul id="6a9d36ea-fd3d-48f0-85db-6318c60f9ba5" class="toggle"><li><details open=""><summary>Pressure applied on a liquid enclosed in a vessel will be transmitted equally in all directions perpendicular to the surface which law is explained by this statement.</summary><p id="2015a049-0ba9-4f8b-aac7-c48807d970f4" class="">This statement explains the Pascal’s law of liquid pressure.</p></details></li></ul><ul id="4ff679ed-edfe-4c2c-a1bc-e7e636dd9048" class="toggle"><li><details open=""><summary>What is hydraulic pressure or liquid pressure? Write down its unit in CGS system?</summary><p id="811355fb-0964-4c62-9abb-bcd11b570130" class="">The pressure exerted by the liquid at the bottom and walls of the container in which it is kept is called liquid pressure.</p><p id="f563adb1-47d6-4519-8e1a-3f5fda465396" class="">Liquid pressure is the force or thrust exerted by liquid per unit area of the surface.</p><p id="429bc86c-5681-407d-91aa-23c8175e4384" class=""> Its CGS unit is dyne<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">/</mi><mi>c</mi><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">/cm^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</p><figure id="9e20cc5d-8ab1-42bd-8e11-71b87396061a"><div class="source"><a href="https://www.youtube.com/watch?v=Cvp6mLWbgaM">https://www.youtube.com/watch?v=Cvp6mLWbgaM</a></div></figure></details></li></ul><ul id="a44d8e8e-4599-4eb8-8117-8bf69de290d4" class="toggle"><li><details open=""><summary>What is principle of the hydraulic machine?</summary><p id="329a7fd6-9bfb-4b22-a21e-d56636759950" class="">A large force is developed on a bigger piston when small force is applied on the smaller piston.</p></details></li></ul><ul id="718966e6-4405-4737-b9a8-7fef9bb7b461" class="toggle"><li><details open=""><summary>What is atmospheric pressure?</summary><p id="1b7e0ed3-a99a-4812-a33e-401746dc2d38" class="">The pressure exerted by air per unit area of earth surface is called atmospheric pressure.<em><strong> Its value is </strong></em><em><strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.01</mn><mo>∗</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1.01*10^5 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1.01</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></strong></em><em><strong>pascal.</strong></em></p><figure id="8860e0bb-d963-4cc7-90d4-9964638e85d4"><div class="source"><a href="https://www.youtube.com/watch?v=KndNN28OcEI">https://www.youtube.com/watch?v=KndNN28OcEI</a></div></figure></details></li></ul><ul id="1024c61f-b143-4240-836c-b590b114dbcb" class="toggle"><li><details open=""><summary>What is hydraulic press?</summary><p id="eaf54692-f54f-40c0-b988-04b0f3d55812" class="">Hydraulic pressure is an equipment based on Pascal’s law which is used to press materials cotton, paper etc.</p><figure id="7b496019-add3-40c9-b20e-b53d771d3450"><div class="source"><a href="https://www.youtube.com/watch?v=8yGTG1Iv0A8">https://www.youtube.com/watch?v=8yGTG1Iv0A8</a></div></figure></details></li></ul><ul id="e789ef85-c72b-4036-9484-01ff29490301" class="toggle"><li><details open=""><summary>Why are hydraulic brakes used?</summary><p id="fecd103a-d6b5-4a72-997a-30d6e3386c37" class="">Hydraulic brakes are used in heavy automobiles like trucks, buses, airplanes, car, motor bike etc to stop them by applying a small force.</p><figure id="6cead32a-cd96-423b-9a81-b2825daba2e0"><div class="source"><a href="https://www.youtube.com/watch?v=82qBBJ8iwcc">https://www.youtube.com/watch?v=82qBBJ8iwcc</a></div></figure></details></li></ul><ul id="63c9bbfa-f054-46dd-bd4a-b0429c12a38b" class="toggle"><li><details open=""><summary>What is water pump?</summary><p id="cba7f8ae-3261-4108-83ae-6b25efe767b7" class="">The equipment which is used to lift water from well is called water-pump.</p></details></li></ul><ul id="1f36954e-7f86-4351-b468-d4c9fe1b2bdc" class="toggle"><li><details open=""><summary>What is the use of a hydraulic jack (lift )</summary><p id="d8a2e343-2168-4eaf-a407-c627b9eefcdb" class="">A hydraulic lift (jack) is used for lifting automobiles like car, bus, truck, bike etc in service station or garages.</p></details></li></ul><ul id="2fa17e92-3b6b-46f3-8a38-20128ec66f55" class="toggle"><li><details open=""><summary>Name two instruments that are based on the law of flotation.</summary><ol type="1" id="fcf7c84c-d27d-4b1f-9f91-4b5cee28e5d6" class="numbered-list" start="1"><li>Hydrometer </li></ol><ol type="1" id="d15f8c35-9fcc-4fe9-a916-8325f8455daa" class="numbered-list" start="2"><li>Ship</li></ol></details></li></ul><ul id="7b15843f-20f7-484a-a20e-cf1c9e2bd1b7" class="toggle"><li><details open=""><summary>How is it possible to fill ink in a fountain pen?</summary><p id="a2dc7415-afae-4d37-809b-ae190759c776" class="">It is possible to fill ink in a fountain pen due to the change in atmospheric pressure inside and outside of the pipe of fountain pen.</p></details></li></ul><ul id="fbe0158b-0a61-49c1-a3c9-e47421f94e7c" class="toggle"><li><details open=""><summary>What is a syringe?</summary><p id="99cde487-658f-460b-8b28-491a91621c87" class="">The medical instrument which is used to draw blood from the body and to inject medicine into the body of patient through blood is called syringe.</p></details></li></ul><ul id="411940ed-a3ed-42e2-889b-15b3e498b3d1" class="toggle"><li><details open=""><summary>What is a mercury barometer?</summary><p id="effa52e3-42ec-4f62-855b-48561f9ea11d" class="">The instrument which is used to measure the atmospheric measure by the use of mercury in it is called a mercury barometer.</p></details></li></ul><ul id="e14f90ae-1804-4522-ad14-db588c9035d7" class="toggle"><li><details open=""><summary>Name three main parts of a syringe.</summary><ol type="1" id="18d744ac-ddf8-40b9-ac8a-59ab9f3a5d6a" class="numbered-list" start="1"><li>Needle </li></ol><ol type="1" id="afbaeaba-4b05-4985-b0c2-ef1ed594d124" class="numbered-list" start="2"><li>Storage cylinder </li></ol><ol type="1" id="c04fb271-6f6c-45a8-90fa-fb46cabc4e68" class="numbered-list" start="3"><li>Piston</li></ol></details></li></ul><ul id="01bf0bf6-fe93-4b73-8bdf-8ce4ed4646e7" class="toggle"><li><details open=""><summary>What is air pump?</summary><p id="36e960f9-6944-4a28-a636-1c50b9b85303" class="">The instrument which is used to pump air or inflate the tubes of vehicles like cycle, motorcycle, etc is called air pump.</p></details></li></ul><ul id="e2f2fdce-8674-415f-a991-d1735e2eaa0a" class="toggle"><li><details open=""><summary>At what condition does a body float on liquid?</summary><p id="9ae065e1-a095-4c53-8c9f-4b1fdddd9897" class="">A body floats on a liquid when the weight of liquid displaced bu it is equal to its own weight.</p></details></li></ul><ul id="784fcab2-126d-4e1e-8602-ecc10d0a7c5f" class="toggle"><li><details open=""><summary>“The weight of the displaced liquid is equal to the weight of floating object.” Which principles does this statement belong to?</summary><p id="906fe2ec-9192-4b65-ac81-aec87a31fbfe" class="">This statement belongs to “law of flotation.”</p></details></li></ul><ul id="98c24c4e-e8ff-496d-9e22-d80fe51212d8" class="toggle"><li><details open=""><summary>Write the value of atmospheric pressure act sea level.</summary><p id="c961ff8e-9f31-4a0b-9c83-08d0a9430373" class="">At sea level, the atmospheric pressure is <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.01</mn><mo>∗</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1.01*10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1.01</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> pascal or 760mm of Hg.</p></details></li></ul><ul id="7d78105d-b4ea-4e95-af22-ed286222cff1" class="toggle"><li><details open=""><summary>What change is atmospheric pressure is observed while moving upwards from the earth’s surface.</summary><p id="2b9ec24d-6786-4823-a95f-e335cb8a6e3f" class="">Atmospheric pressure decreases while moving upwards from the surface of the earth.</p></details></li></ul><ul id="47e6f35f-ac50-4987-9060-ee621ecd13f7" class="toggle"><li><details open=""><summary>Why does air give pressure towards ground?</summary><p id="1da36208-dc97-4877-94f2-013194b09ff1" class="">Air gives pressure towards ground due to its weight.</p></details></li></ul><ul id="6bf9bcca-970d-4c6b-a86d-b45671049610" class="toggle"><li><details open=""><summary>What is atmospheric pressure?</summary><p id="b20d6b36-b6f1-478a-98a3-00cc2d1a748f" class="">The pressure exerted by air per unit area of earth’s surface is known as atmospheric pressure.</p></details></li></ul><ul id="23064642-2bf4-4daa-abe9-126965569777" class="toggle"><li><details open=""><summary>What is the atmosphere?</summary><p id="6d4b0f79-c9fa-42c2-9126-212796ae19b7" class="">The earth is covered by a thick layer of air which is known as the atmosphere.</p><figure id="3a9972ea-2c4d-4515-b6ea-695be3939e22"><div class="source"><a href="https://www.youtube.com/watch?v=11ZI9aqurfA">https://www.youtube.com/watch?v=11ZI9aqurfA</a></div></figure><figure id="63657dd1-ce92-493d-a9be-b13462024ea8"><div class="source"><a href="https://www.youtube.com/watch?v=Wo1vzNWUFZE&amp;t=14s">https://www.youtube.com/watch?v=Wo1vzNWUFZE&amp;t=14s</a></div></figure></details></li></ul><ul id="88d48ca8-edcc-4797-ab25-d1116c947abf" class="toggle"><li><details open=""><summary>Name any two equipment based on atmospheric pressure.</summary><ol type="1" id="d506c205-41a1-43e6-9e3e-a85c979f0954" class="numbered-list" start="1"><li>Water lifting pump</li></ol><ol type="1" id="3c1e6c53-d53b-403b-9d60-5a21f8b41190" class="numbered-list" start="2"><li>Air filling pump in bicycle.</li></ol></details></li></ul><ul id="8dbb7ac7-3350-4798-808f-a3db902963a8" class="toggle"><li><details open=""><summary>How it is possible to fill medicine in a syringe? Write</summary><p id="0d494984-9614-477b-9fd5-4d6325757bab" class="">It is possible to fill medicine in a syringe due to the change in atmospheric pressure inside and outside of pipe (barrel) of a syringe.</p></details></li></ul></div></article></body></html>

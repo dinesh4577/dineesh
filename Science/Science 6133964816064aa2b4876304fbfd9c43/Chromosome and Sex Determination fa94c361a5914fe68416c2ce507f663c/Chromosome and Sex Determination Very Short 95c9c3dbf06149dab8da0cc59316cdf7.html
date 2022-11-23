@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Chromosome and Sex Determination:Very Short</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="95c9c3db-f061-49da-b8da-0cc59316cdf7" class="page sans"><header><h1 class="page-title">Chromosome and Sex Determination:Very Short</h1></header><div class="page-body"><ul id="bd813680-583d-468a-be05-5a08abf6f134" class="toggle"><li><details open=""><summary>What are genes?</summary><p id="68f9c228-e4e0-4cfa-8bd6-a241b222a71c" class="">Genes are the smallest segment of DNA of the chromosomes with in the nucleus.</p></details></li></ul><ul id="e651d7c2-0363-48d0-a02b-b52d4eed5d3b" class="toggle"><li><details open=""><summary>What are gens made of ?</summary><p id="54ba1304-c136-4863-af78-bfc6b84b0f32" class=""> Gens made of DNA</p></details></li></ul><ul id="558e6d84-5095-48eb-94e4-52ee972f8ac2" class="toggle"><li><details open=""><summary>What types of cells contain diploid chromosomes?</summary><p id="29b527a7-2d23-4d04-983a-8c0df71a6215" class="">Somatic cells or body cells contain diploid chromosomes.</p></details></li></ul><ul id="7dd4e23c-e599-4cdd-915a-b5907bd4ee16" class="toggle"><li><details open=""><summary>What is kinetochore?</summary><p id="c7fba7c4-44c8-489b-a55d-4ec7ccf87cc9" class="">The centromere of chromosome is called kinetochore.</p></details></li></ul><ul id="88d3cd41-9791-415a-afad-7b80aad62548" class="toggle"><li><details open=""><summary>Write down the major function of genes.</summary><p id="072bbfd6-9793-4df4-a057-94ea19ebe15e" class="">The major function of genes is to transmit hereditary characteristics from one generation to another.</p></details></li></ul><ul id="b3b0328d-a563-4b96-9797-6122ff334a5f" class="toggle"><li><details open=""><summary>What is a sex-linked disease?</summary><p id="8de8ad80-214b-4084-89d7-58fbe7dbefac" class="">The disease which occurs only in a particular sex (either male or female) is called sex-linked disease Eg, nigh blindness, colour blindness, hemophilia etc.</p></details></li></ul><ul id="4a375bae-0888-4e7e-9400-96cfebdc1c0f" class="toggle"><li><details open=""><summary>What is sex chromosome?</summary><p id="35534441-a4ec-4669-a623-71f48c2afcb8" class="">The chromosome that determine the sex of an organism is called sex chromosome. Eg. X and Y chromsome.</p></details></li></ul><ul id="8e761366-0602-4634-a879-fa0c4797b74c" class="toggle"><li><details open=""><summary>Write any two examples of chromosomal disorder.</summary><ol type="1" id="082b4d2b-1546-4be7-b069-dfbe2edbcc0f" class="numbered-list" start="1"><li>Down’s syndrome</li></ol><ol type="1" id="39340571-1a1e-472b-bda1-59c5e8917172" class="numbered-list" start="2"><li>Klinefelter’s syndrome</li></ol></details></li></ul><ul id="eda5b0a0-285d-4225-af71-44c9e932f0b1" class="toggle"><li><details open=""><summary>What is a metacentric chromosome?</summary><p id="342b8d8c-2da0-4396-8bc9-682fafc5630b" class="">The chromosome having centromere in the middle and equal arms is called metacentric chromosome.</p><figure id="08072691-55b1-4c03-bb97-c98c2a2720bf" class="image"><a href="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled.png"><img style="width:288px" src="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled.png"/></a></figure></details></li></ul><ul id="db7eec66-e5b9-4d17-b00f-287fe8079b56" class="toggle"><li><details open=""><summary>Write any two effects seen from Klinefelter’s disorder.</summary><ol type="1" id="e583078a-156d-4333-910c-cc09a50ead88" class="numbered-list" start="1"><li>Infertility and growth of breasts in male.</li></ol><ol type="1" id="bb44da5a-3b6e-41a6-acdb-1a64c768d2fd" class="numbered-list" start="2"><li>Tall stature, small genitals, less body hair.</li></ol></details></li></ul><ul id="1066c8f3-54e2-4ed4-81da-b8221d0de642" class="toggle"><li><details open=""><summary>What is a sub-metacentric chromosome?</summary><p id="f64e55e5-893b-415b-9cf1-108a772eb9df" class="">If centromere is present in the sub-median region and the chromosome is divided into two unequal arms is called sub-metacentric chromosome.</p><figure id="617c54b1-331e-4746-9cc7-43c88a66b7ba" class="image"><a href="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%201.png"><img style="width:192px" src="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%201.png"/></a></figure></details></li></ul><ul id="602711ac-3979-465f-9a72-78dc012b89cf" class="toggle"><li><details open=""><summary>What is an acrocentric chromosome?</summary><p id="69581962-6f3f-4ab3-8d53-e08a625b571a" class="">If centromere is present in the sub-terminal region and the chromosome is divided into a very short arm at one region and very long arm at another region, then this chromsome is called acrocentric chromosome</p><figure id="dbb234c8-e372-4beb-8cfd-bbb7d89f8557" class="image"><a href="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%202.png"><img style="width:1600px" src="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%202.png"/></a></figure></details></li></ul><ul id="d7c0e0e8-d4d1-4e96-b863-1d4d36d49561" class="toggle"><li><details open=""><summary>What sex chromosome are found in male and female?</summary><p id="f1178219-188b-4330-9e61-dfcb0d3a7fcb" class="">Male: XY</p><p id="1a53aa9b-de79-41d6-8637-ec470de37150" class="">Female: XX</p></details></li></ul><ul id="de74a37e-2f76-442f-af7c-e3985a5ef6c1" class="toggle"><li><details open=""><summary>What are chromosomes made of?</summary><p id="d9bf9d73-309f-48bc-a4cb-afe759cb556f" class="">DNA and protein</p></details></li></ul><ul id="7f10edc2-67d9-45ea-8a5a-6a64d9be4581" class="toggle"><li><details open=""><summary>What are chromosomes?</summary><p id="68112fe9-6a6a-4fd2-b511-d08422072524" class="">Chromosomes are thread-like structures present in the nucleus of the cell.</p></details></li></ul><ul id="f2874a22-60a8-432b-b99a-07ca1443a560" class="toggle"><li><details open=""><summary>What is telecentric chromosome?</summary><p id="07ed80b7-d949-40fe-ac6c-6e8884b1b34b" class="">The chromosome having centromere at one end of chromatid is called telocentric chromosome.</p><figure id="5a84f4fb-3d30-4fda-9acf-4d021d7698d7" class="image"><a href="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%203.png"><img style="width:1600px" src="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%203.png"/></a></figure></details></li></ul><ul id="727ee495-ff35-49ad-825d-1880389684a4" class="toggle"><li><details open=""><summary>What are herediatry characteristics?</summary><p id="cbb55ae5-ca51-44f6-a9ab-14d5faf567bf" class="">The characteristics which are transmitted from one generation to another are called</p></details></li></ul><ul id="c190ba0b-2aa3-464c-89e8-892b766a110d" class="toggle"><li><details open=""><summary>How many types of chromosomes are there on the basis of position of centromere?</summary><p id="3ae3c2b7-8a96-4e2d-8b48-c2df1b8ca396" class="">4</p><figure id="643d442f-10d1-4a78-af73-e78ec8581b5c" class="image"><a href="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%204.png"><img style="width:1600px" src="Chromosome%20and%20Sex%20Determination%20Very%20Short%2095c9c3dbf06149dab8da0cc59316cdf7/Untitled%204.png"/></a></figure></details></li></ul><ul id="eead014b-6b68-4712-9d12-80788f7b5b5c" class="toggle"><li><details open=""><summary>What types of cells contain haploid chromosomes?</summary><p id="7f05cb5b-5fa3-4599-a0f7-c86800abd1be" class="">Gametes (male gamete or female gamete) contains haploid chromosome. It is denoted by n.</p></details></li></ul><ul id="05b9388e-71a8-44c9-985a-b8c5a96d5d2e" class="toggle"><li><details open=""><summary>Write any two examples of sex-linked diseases?</summary><p id="9b17b201-e88b-44e1-b8cc-98de9a472762" class="">The example of sex-linked disease are:</p><ol type="1" id="7088a557-402e-45e6-9ae1-9d680e8aceaf" class="numbered-list" start="1"><li>Colour blindness</li></ol><ol type="1" id="ca4ed521-3225-4c8b-85c6-ce1386ad3196" class="numbered-list" start="2"><li>Haemophilia</li></ol><ol type="1" id="1cfed0e2-b7f2-4e6f-9759-c16ab35efa24" class="numbered-list" start="3"><li>Night blindness</li></ol></details></li></ul><ul id="388b66c9-c7c3-4f06-ae33-de168f47bbed" class="toggle"><li><details open=""><summary>What is a haploid cell?</summary><p id="b5713670-8e6f-4baa-9361-53482fb15304" class="">The cell having half number of chromosomes as compared to diploid cell i.e. only one complete set of chromosomes is called haploid cell. It is denoted by ‘n’</p></details></li></ul><ul id="58b19f03-2f2a-4b61-ad02-648a3a351024" class="toggle"><li><details open=""><summary>Where are genes found?</summary><p id="63f82bc1-3137-4671-acbf-9de187142feb" class="">chromosome</p></details></li></ul><ul id="e09b04da-95cd-41ed-b013-fd13358c44d1" class="toggle"><li><details open=""><summary>What is a chromosomal disorder?</summary><p id="6f80d253-bb71-4449-9d5d-84d59a911318" class="">The disorder caused in human beings due to increase or decrease in the number of chromosome is called chromosomal disorder. Eg. Down’s syndrome, Turner’s syndrome etc.</p></details></li></ul><ul id="564ea53a-8895-4c46-8576-4787b41be360" class="toggle"><li><details open=""><summary>Write down the major function of chromosomes.</summary><p id="84587691-5139-46be-8074-e72998dec182" class="">The major function of chromosome is to transmit parental characteristics to their offspring with the help of genes.</p></details></li></ul><ul id="50e94597-2102-434e-a305-c7069f864eb3" class="toggle"><li><details open=""><summary>What is a diploid cell?</summary><p id="3b1f67e9-8adf-48da-8dcb-7f21a8398267" class="">The cell having two complete sets of chromosomes is called diploid cell. It is denoted by ‘2n’. Eg. Somatic cell, muscle cell, skin cell, zygote etc.</p></details></li></ul><ul id="c93d84ba-3b87-47c6-811f-ebd2ebec1c69" class="toggle"><li><details open=""><summary>What is the cause of Klinefelter’s syndrome.</summary><p id="d7cb19af-29ae-4607-a9d5-d1a9393d56e0" class="">The major cause of Klinefelter’s sundrome is the addition of sex chromosomes. i.e X-chromosome and the number of chromosomes becomes 47. i.e (44+XXY)</p></details></li></ul><ul id="51cb7c49-4c8f-4ced-8a80-5e85c395f96e" class="toggle"><li><details open=""><summary>Write down the major cause of Down’s syndrome.</summary><p id="e2da5a13-4574-4198-89c6-0ef7e5a8def0" class="">is the addition of one extra chromosome number 21 (Trisomy of 21).</p><p id="8cedc929-7b00-420c-958e-5ee560240ed6" class=""> Male :45+XY</p><p id="5b253e32-0cbe-4e79-9d07-29cde98a9d0e" class="">Female: 45+XX</p></details></li></ul><ul id="8d77aa31-de8e-4f97-b6d7-c93a5796d12b" class="toggle"><li><details open=""><summary>What is the full form of DNA?</summary><p id="527dec75-94fc-4d1d-9d34-772f668b687d" class=""><strong>Deoxyribonucleic acid</strong></p></details></li></ul><ul id="8e413733-77f6-4e41-9e4c-a49223059700" class="toggle"><li><details open=""><summary>What is the cause of Turner’s syndrome?</summary><p id="2526e0fe-0072-43e5-971a-3d3b851c40fc" class="">The major cause of Turner’s syndrome is due to lack of X-Chromosome. In this condition the number of chromosomes becomes 45. i.e (44+X0)</p></details></li></ul></div></article></body></html>

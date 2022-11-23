@@ -1,0 +1,671 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Human Nervous System and Glandular System-Very Short</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="efeddc52-d763-4a61-bb13-34d84a88bd51" class="page sans"><header><h1 class="page-title">Human Nervous System and Glandular System-Very Short</h1></header><div class="page-body"><ul id="1c762c15-8022-4d4e-8828-66c454b0b7a6" class="toggle"><li><details open=""><summary>What are nerves?</summary><p id="a9cc10d8-8b98-4553-b2e4-393c667d81c2" class="">Nerves are the communication lines for transmission of impulses from one part of body to another part. Nerves are elongated, slender, thread-like strctures arising from brain and spinal cord.</p></details></li></ul><ul id="9474c028-c83c-42e1-9313-82dfa995a781" class="toggle"><li><details open=""><summary>What is a neuron (or a nerve cell)?</summary><p id="de01ab42-fcc5-44bb-a8d7-ed22445ebde1" class="">Neuron (Nerve cell) is a highly specialized cell which acts as a structural and functional unit of nervous system.</p></details></li></ul><ul id="54cd8179-5211-4c26-a4cf-1484d964b871" class="toggle"><li><details open=""><summary>Name the three membrane that surround the brain and spinal cord.</summary><p id="280ad1f9-01cd-4e37-94a2-fe6cbb91d010" class="">The three membranes that surround the brain and spinal cord are:</p><ol type="1" id="d78590ed-5adf-4fff-8540-a5d7f4a81e0c" class="numbered-list" start="1"><li>Durameter</li></ol><ol type="1" id="6693dd90-9b80-4d4e-8898-cf0b588c861b" class="numbered-list" start="2"><li>Piameter</li></ol><ol type="1" id="bd928f07-ccc5-4ee4-8b10-f2bb319da36b" class="numbered-list" start="3"><li>Arachnoid</li></ol></details></li></ul><ul id="ae7a9433-efe0-4ab9-9e7a-78f1c6f4c446" class="toggle"><li><details open=""><summary>What is cerebrospinal fluid?</summary><p id="06eac4cd-ba53-4326-a55f-80ee4604d3af" class="">The space between the arachnoid and piameter is filled with a fluid known as cerebrospinal fluid.</p></details></li></ul><ul id="02e9e420-5096-4571-bcb1-70d579ac6ee8" class="toggle"><li><details open=""><summary>Where is cerebrospinal fluid found?</summary><p id="ccbba4b7-c5d0-4850-939a-8745ef6aa742" class="">It is found between piameter and arachnoid.</p></details></li></ul><ul id="db45d0c5-944a-4e8f-ac14-afe160ca0409" class="toggle"><li><details open=""><summary>Write down the surface area of the cerebrum.</summary><p id="113ca87d-2382-49ef-907d-5de0694e8b49" class="">The surface area of the cerebrum is about <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2200</mn><mi>c</mi><msup><mi>m</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">2200cm^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">2200</span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>.</p></details></li></ul><ul id="e8fc2094-7a81-4bfc-b8e2-4a79f5119842" class="toggle"><li><details open=""><summary>What are the two parts of central nervous system</summary><ol type="1" id="71057319-973c-4e6e-9a64-fdaa8d256fe6" class="numbered-list" start="1"><li>Brain </li></ol><ol type="1" id="70baa99d-0b86-4645-87a8-5d258fa5793f" class="numbered-list" start="2"><li>Spinal Cord</li></ol></details></li></ul><ul id="afa9ae80-2a63-4035-8506-f5be60b2b2ee" class="toggle"><li><details open=""><summary>What is peripheral nervous system?</summary><p id="56d1fb98-f2dd-4c9f-972e-7f4f4cc79a44" class="">The nervous system formed by cranial nerves and spinal nerves that communicate between brain and different body parts is known as peripheral.</p></details></li></ul><ul id="02d9957d-261d-4f3b-9e7e-741e582c99a8" class="toggle"><li><details open=""><summary>Give two examples of exocrine gland.</summary><ol type="1" id="4e8dfbb3-b28c-459f-99f6-4bbd9f4d8648" class="numbered-list" start="1"><li>Salivary gland</li></ol><ol type="1" id="3813935c-953d-45d3-9d27-a6fab4a328a8" class="numbered-list" start="2"><li>Gastric gland</li></ol><ol type="1" id="aff9a84f-34df-47a8-974e-83cc34b9e9a9" class="numbered-list" start="3"><li>Intestinal gland</li></ol></details></li></ul><ul id="c9b9be19-aa53-4435-8e71-f31a2ca7bcb9" class="toggle"><li><details open=""><summary>What is the main function of cerebrospinal fluid?</summary><p id="b4c260b7-b217-496f-a4ff-289bd0c86b31" class="">The main function of cerebrospinal fluid is to protect the brain and spinal cord from mechanical shock or external injury.</p></details></li></ul><ul id="d43ead07-c00c-46f0-a431-c99d237798b3" class="toggle"><li><details open=""><summary>What is central nervous system?</summary><p id="a3dc4bb7-47e1-401c-8464-87be4d722f8d" class="">The nervous system formed by brain and spinal cord is called central nervous system.</p></details></li></ul><ul id="93d6526e-77e4-46b6-9ef8-ad625997dd75" class="toggle"><li><details open=""><summary>What is nervous system?</summary><p id="8a5fdeb1-2432-4982-a8aa-c0259a6bbfb9" class="">The nervous system is a network of organs and tissues that controls and co-ordinates all the activities of the body with the help of nerves.</p></details></li></ul><ul id="c9233ab3-e56b-4ea8-94ed-703020957361" class="toggle"><li><details open=""><summary>Write two substances produced by testes.</summary><ol type="1" id="60debed5-952c-41d0-9c4b-0454897a6528" class="numbered-list" start="1"><li>Sperm </li></ol><ol type="1" id="5dd701ca-cc62-4f1c-bf48-dc31812c6b4a" class="numbered-list" start="2"><li>Testosterone</li></ol></details></li></ul><ul id="fa810445-8b11-4547-a257-f4b910fa6f85" class="toggle"><li><details open=""><summary>How many numbers of spinal nerves are present in human body?</summary><p id="1f423abf-30e9-482f-b0b7-07c8d991a9e6" class="">In human body, 31 pairs of spinal nerves are present.</p></details></li></ul><ul id="d86107f4-04be-4965-9010-9b89311ebd8c" class="toggle"><li><details open=""><summary>What is cerebellum or small brain?</summary><p id="5413a154-7ffb-4634-8add-ce4808786a12" class="">Cerebellum (Small brain) is the <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>n</mi><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{nd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> largest part of the brain which occupies 10% of the total weight of brains which consists of two deeply convoluted hemispheres.</p></details></li></ul><ul id="b4cdea86-7b0a-4483-84f3-589a600b6445" class="toggle"><li><details open=""><summary>What is spinal cord?</summary><p id="bdec7e49-1afb-4741-943e-4fadd51bf3e1" class="">Spinal cord is a long, cylindrical structure that aries from the medulla oblongata of brain and passes through the neural canal of vertebral column.</p></details></li></ul><ul id="cb1a4c88-49dc-458f-ad9d-16b02ccf4894" class="toggle"><li><details open=""><summary>State the major function of the spinal cord.</summary><ol type="1" id="7f632e4b-60a0-4119-8509-fba514d5198d" class="numbered-list" start="1"><li>It controls reflex action</li></ol><ol type="1" id="78960aca-8189-480c-9a91-81390fdffd9a" class="numbered-list" start="2"><li>Spinal cord connects a large part of peripheral nervous system to the brain.</li></ol></details></li></ul><ul id="8207f9d5-92fd-4cae-8a7f-b91154f6db6d" class="toggle"><li><details open=""><summary>Which part of central nervous system conducts </summary><p id="96f7a5bb-feb5-40ec-8f1e-5167ac6696e4" class="">Spinal cord conducts reflex action.</p></details></li></ul><ul id="2e2b291d-8ee2-4d62-8c99-6dea793c9da5" class="toggle"><li><details open=""><summary>What is meant by ganglion? Write its function.</summary><p id="8973aa2c-97c0-44d0-a72b-5cadb52ee330" class="">A ganglion is the group of nerve tissues near the spinal cord which is made by grey matter.</p><p id="be402fc4-96f2-4a9d-964e-498a478d84df" class=""> A ganglion communicates with the spinal cord and the brain.</p></details></li></ul><ul id="3e4a0efc-c67f-4ae8-a2f5-6ba5a7d355b7" class="toggle"><li><details open=""><summary>State the function of mid-brain.</summary><ol type="1" id="19e10914-de17-4713-91e8-7799c6700f06" class="numbered-list" start="1"><li>The mid-brain controls reflex movements of the head, neck and trunk is response to the visual and auditory stimuli.</li></ol><ol type="1" id="eba623d3-fe26-4a59-a6cd-0f7efe50b455" class="numbered-list" start="2"><li>It also controls the reflex movements of the eye muscles, changes the shape of eye lens and pupil size.</li></ol></details></li></ul><ul id="b8e21172-5b18-499e-ba77-a64ea9dc7e84" class="toggle"><li><details open=""><summary>Write the main function of insulin hormone.</summary><p id="cb7bab26-2aad-43b0-85c3-c80cfc7c7cfb" class="">The main function of insulin is to regulate blood sugar level by regulating conversion of glucose into glgcogen.</p></details></li></ul><ul id="c35e1949-e18a-4b2e-9614-f236acd8ef7d" class="toggle"><li><details open=""><summary>What is autonomic nervous system?</summary><p id="48cf57d3-7b26-459b-9e08-5e08426a9b3e" class="">The nervous system that controls certain muscles and glands while sleeping or waking up is called autonomic nervous system.</p><p id="8bfa5a07-e170-4b0d-88e9-092f99a6d6fc" class="">
+</p></details></li></ul><ul id="d9d78f16-af6d-4005-9eb1-fd506a347f1d" class="toggle"><li><details open=""><summary>Name the two types of autonomic nervous system.</summary><ol type="1" id="716b5f15-4017-43b7-84aa-de9a961940a7" class="numbered-list" start="1"><li>Sympathetic nervous system -heart, stomach, lungs, intestine-increases</li></ol><ol type="1" id="b83f3e9e-155a-4152-a820-fab0d9b603a9" class="numbered-list" start="2"><li>Parasympathetic nervous system- heart, stomach,lungs, intestine-normal condition.</li></ol></details></li></ul><ul id="4d166a7c-2409-47b7-8da1-fa28fb5bbc6a" class="toggle"><li><details open=""><summary>What are cranial nerves?</summary><p id="c1dfbff2-f2e3-4a61-9ac1-1688f0647016" class="">The nerves that arises (originate) from the brain are called cranial nerves .</p><p id="8f979998-9d12-4bae-af21-30799d12ba71" class=""> There are 12 pairs of cranial nerves.</p></details></li></ul><ul id="c0056965-a558-4e52-95b2-ef5c6e64009e" class="toggle"><li><details open=""><summary>What are spinal nerves?</summary><p id="919a4193-8872-4e35-a2ea-dee736f65a86" class="">The nerves that originate from the spinal cord and spread to various body parts are called spinal nerves. There are 31 pairs of spinal nerves.</p></details></li></ul><ul id="31c238b5-a2b0-4c16-9432-28c3136f0a0f" class="toggle"><li><details open=""><summary>Write down the function of sympathetic nervous system?</summary><p id="678b371c-3a85-4860-ba5a-ca6f850015ab" class="">The function of sympathetic nervous system is to increase the working of heart, lungs, stomach, intestine and urinary bladder.</p></details></li></ul><ul id="8a0fb184-4b8f-4507-a92f-9fb76f43a12e" class="toggle"><li><details open=""><summary>What is the function of parasympathetic nervous system?</summary><p id="ee42a6a8-e534-4e04-9a9e-8c68d6c75493" class="">The function of parasympathetic nervous system is to bring the activites of heart, lungs, stomach, intestine of urinary bladder to normal condition.</p></details></li></ul><ul id="b83e5407-e744-4939-bf47-8f0ca7a68bf3" class="toggle"><li><details open=""><summary>What is an impulse? Give any one example</summary><p id="8eb16dd1-cbeb-4159-9b5c-c2a1c65e00c7" class="">An impulse is a wave of electrical disturbance that sweeps over the nerve. Eg. impulse of touch.</p></details></li></ul><ul id="a9d07eee-cbaa-4edc-a4dc-427e183ec6a1" class="toggle"><li><details open=""><summary>What are effector organ? Give examples</summary><p id="48ec18aa-ff10-44fc-a7fd-7ef970934b2c" class="">The organs which becomes stimulated on receiving the impulse are called effector organs. Eg. eye, tongue, etc.</p></details></li></ul><ul id="0ab55ca5-d8da-4fb2-8528-efa727ff32e3" class="toggle"><li><details open=""><summary>How much percentage of the brain does cerebrum occupy?</summary><p id="f2ce39f9-1ea0-43f6-ba4a-9a8436b6d7f5" class="">Cerebrum occupies about 80% of the total weight of brain.</p></details></li></ul><ul id="cbcd69c7-7578-4ed1-afce-9f371fe43403" class="toggle"><li><details open=""><summary>What happens when cerebrum stops working?</summary><p id="d36be079-2081-42ff-9b66-ee1d886fa01e" class="">When cerebrum stops working, the person enters into coma.</p></details></li></ul><ul id="cdcd8ba0-d1d1-42c0-a86b-64e586fbcc2e" class="toggle"><li><details open=""><summary>What is mid-brain? Where it is  located?</summary><p id="3fcc21ff-7b66-4ae3-8d99-9aedf458c97b" class="">Mid-brain is a thick walled structure which constitutes a small middle portion of the portion of brain . It is located between cerebrum and pons varoli.</p></details></li></ul><ul id="6ef4ffbd-841e-43ae-bc86-616dc1e636f7" class="toggle"><li><details open=""><summary>Which hormone is resposible</summary><ol type="1" id="c5ddb407-4434-42af-ae7f-8a825972bc12" class="numbered-list" start="1"><li>Balances calcium level in bone- Calcitocin (Thyroid gland)</li></ol><ol type="1" id="7a71857b-42a1-4464-8b92-bf758f8fbf68" class="numbered-list" start="2"><li>Maintains the level of sugar in blood-Insulin (Pancreas)</li></ol></details></li></ul><ul id="92ff0ffc-8004-4a82-aad9-0c96d2460c51" class="toggle"><li><details open=""><summary>Write any two effects of hypersecretion of insulin?</summary><ol type="1" id="d8a6ad2c-4000-4d23-8be7-aa7d0b04ea5f" class="numbered-list" start="1"><li>High level of sugar content in blood.</li></ol><ol type="1" id="5d3fab45-3a87-4d66-b17a-7ff6f25d8c4c" class="numbered-list" start="2"><li>Thrist and hunger.</li></ol></details></li></ul><ul id="55b4bcd5-461b-434c-8af6-96bf37b869da" class="toggle"><li><details open=""><summary>Write down the functions of testosterone</summary><p id="e162793b-7283-4f05-ac9f-0b317caa2a5c" class="">This hormone controls the development of secondary sexual characteristics in makes like enlargement of penis and scrotum, growth of facial and pubic hair, deeper voice, enlargement of larynx etc.</p></details></li></ul><ul id="a5b14a10-a5d1-444f-8a40-245c7f967023" class="toggle"><li><details open=""><summary>What disorders are caused to the under secretion and oversecretion of parathormone hormone?</summary><p id="7a416cc4-aa33-4e75-adac-0f427bd62d7b" class="">Undersecretion of parathormone hormone causes painful jerk of voluntary muscles.</p><p id="1f8edc3b-a06b-4f27-a322-0162c75364ec" class=""> Oversecretion of parathormone hormone results in softening of bones that could be fractured easily.</p></details></li></ul><ul id="5c3ea6fc-3ae5-4524-ae27-e7177392b7f8" class="toggle"><li><details open=""><summary>What are hormones?</summary><p id="493227ec-a26f-4e0d-a966-e6875661aad1" class="">Hormones are the chemical messenger (regulators) which control, co-ordinate and integrate the functions of various organs of our body.</p></details></li></ul><ul id="91c50736-54f8-4ce0-8e23-7e1fe52e32b4" class="toggle"><li><details open=""><summary>Name the hormone that is produced by thyroid gland.</summary><p id="2fb4e437-c595-44e5-919b-bb30df6a7dab" class="">Thyroxin and Calcitonin are the hormones produced by thyroid gland.</p></details></li></ul><ul id="a823d9d6-f6d2-4092-9382-e0b736def488" class="toggle"><li><details open=""><summary>Write name of two hormone that is produced by pituitary gland.</summary><ol type="1" id="ba147740-4537-4ed5-9c8e-67404babd556" class="numbered-list" start="1"><li>Growth hormone (GH)</li></ol><ol type="1" id="627dd562-747e-4f67-bd9c-219919e25fd8" class="numbered-list" start="2"><li>Thyroid-stimulating hormone (TSH)</li></ol><ol type="1" id="97ce5b89-43f2-40dc-bdf5-7685ed18dba8" class="numbered-list" start="3"><li>Follicle-stimulating hormone (FSH)</li></ol><ol type="1" id="c953e2bb-3151-4bc7-b8a2-3fba25bb9d29" class="numbered-list" start="4"><li>Tropic hormone (TH)</li></ol><ol type="1" id="7dbcea7a-8a6a-4759-8dd8-3b2bdfa5d1c8" class="numbered-list" start="5"><li>Prolactine hormone (PRL)</li></ol></details></li></ul><ul id="6417bc5f-594b-4d80-a00e-68da147b9f5f" class="toggle"><li><details open=""><summary>Where is thyroid gland located in human body?</summary><p id="91efff72-215e-46d1-8e18-6fb8a06fd7d9" class="">Thyroid gland is located in neck region in front of trachea just below the larynx.</p></details></li></ul><ul id="9f20b9d6-e5df-447c-8cd9-b7c61fe24bb1" class="toggle"><li><details open=""><summary>Where are parathyorid located? Write down their shape</summary><p id="f1220c04-f1bf-49b6-a103-a7aefbc69c8f" class="">Two pairs of parathyroid glands are present on the dorsal side of thyroid gland. Parathyroid gland is oval in shape.</p></details></li></ul><ul id="e2cdd718-2497-4286-8e6d-28395ad4b216" class="toggle"><li><details open=""><summary>Name the hormone secrected by parathyroid gland with its function.</summary><p id="844fb6c2-5464-4441-b11d-7887eab4de57" class="">Parathyroid gland secrets a hormone called parathormone hormone. Its function is to control the exchange of calcium between blood and bones.</p></details></li></ul><ul id="55e8bdc3-3cbc-42c8-bf39-083183379b0d" class="toggle"><li><details open=""><summary>What disorder are caused due to hyposecretion and hypersecretion of growth hormone?</summary><p id="09477775-0590-4fc4-8d8a-190529e4b6c1" class="">The hyposecretion (deficiency) of growth hormone causes dwarfness whereas hypersecretion causes gigantism.</p><p id="a8c4dd5e-38fb-4498-8977-3f2f270814c9" class=""> The hypersecretion of GH is adults leads to overgrowth of jaw bone and bowing of backbone.</p></details></li></ul><ul id="5d32d1d4-ee72-4050-9a7e-92bc678f4a8b" class="toggle"><li><details open=""><summary>Where are adrenal glands located in human body?</summary><p id="3bfaa2e1-bab7-4cd9-8d2e-cc7fdcd8e1e7" class="">In human body, two adrenal glands are located one on te top of each kidney in the form of crown.</p></details></li></ul><ul id="ea4ba0c6-2b87-409b-a3a3-52b0d0a4af13" class="toggle"><li><details open=""><summary>Write the name of hormone and gland that controls blood sugar.</summary><p id="42ac9252-627b-45d5-b180-58af8845ba56" class="">The hormone that control blood sugar level is insulin and the gland that secretes insulin is pancreas.</p></details></li></ul><ul id="5920d863-2050-430e-b3e9-9625625fd29e" class="toggle"><li><details open=""><summary>What are gonads?</summary><p id="502f100a-c690-44f9-bec6-f6abdeb9b537" class="">Testes of male ovaries of females are called goand.</p></details></li></ul><ul id="7831cb0e-d207-4e18-94af-ca17afc45478" class="toggle"><li><details open=""><summary>Where are testes located in human body? Name the hormone secreted by testes.</summary><p id="bc435b0d-cf2e-4618-acfe-82c9e0617fa7" class="">Testes are oval organs which lie in small muscular pouch (i.e. scrotum) outside the abdominal cavity of a man.</p><p id="a9f78858-429b-455b-82e6-b17c63f28efc" class=""> Testes produce a male hormone called “ Testosterone”.</p></details></li></ul><ul id="d4e65824-f160-4c1f-9471-27a8628bd064" class="toggle"><li><details open=""><summary>What is endocrine system?</summary><p id="4e35b11b-7866-4620-8ab8-03e21a02a1d7" class="">The system formed by group of endocrine glands is called endocrine glands.</p></details></li></ul><ul id="ea3888f6-bb47-4b40-b46e-1b76f760b7ba" class="toggle"><li><details open=""><summary>What are endocrine glands?</summary><p id="4a269dff-910c-4fa9-b5f4-7e2b7328766c" class="">The glands which do not have any duct and pour thier secretion directly into the blood are called endocrine glands. E.g. Thyroid gland, Parathyroid gland, Adrenal gland etc.</p><p id="f0a21c2f-ab51-45c4-98b4-c73ab970c148" class="">
+</p></details></li></ul></div></article></body></html>

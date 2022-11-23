@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Very Short-Invertebrates</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="47f401a5-5397-4cee-b6d8-01f049ba6269" class="page sans"><header><h1 class="page-title">Very Short-Invertebrates</h1></header><div class="page-body"><ul id="41fac703-ced2-44d6-885d-93266c7a24e5" class="toggle"><li><details open=""><summary>Write down the food of seri silkworm and Eri Silkworm</summary><p id="e9d37a4e-88eb-4a35-a5aa-cff606f7553b" class="">Seri Silkworm: Mulberry leaves</p><p id="14aebd2b-d549-44af-ae44-ee8feb0e6973" class="">Eri Silkworm : Castor Leaves</p></details></li></ul><ul id="7a056cab-302a-4a16-b97e-14ea46da7466" class="toggle"><li><details open=""><summary>What is  cocoon? What is it made of?</summary><p id="c27d33b1-8e63-403d-a6d8-4a77beaaa66f" class="">Cacoon is the spherical cover of the pupa of silkmoth.</p><p id="2fc527c1-9707-495a-8131-74ec8c7fa10b" class="">    It is made up of silk fibre.</p></details></li></ul><ul id="7556e8f3-9300-44a7-92ae-708c5ad3dbfc" class="toggle"><li><details open=""><summary>In how many stages does the life cycle of silkmoth complete? What are they.</summary><p id="f82b38fa-8715-4604-9325-7cce71fb9e32" class="">The life cycle of silkmoth completes in 4 distinct stages.</p><ol type="1" id="d944d578-9baf-4f8f-b840-113e516c5d05" class="numbered-list" start="1"><li>Egg</li></ol><ol type="1" id="d05302eb-4993-4e26-a959-119dfb79763e" class="numbered-list" start="2"><li>Larva</li></ol><ol type="1" id="2d98d4fe-20e1-4302-abc8-5c7c2f8e202c" class="numbered-list" start="3"><li>Pupa </li></ol><ol type="1" id="e507bd33-2c69-40f1-b657-1a32c2ff3118" class="numbered-list" start="4"><li>Adult</li></ol></details></li></ul><ul id="d81314eb-79bc-4658-af64-d52e059ea376" class="toggle"><li><details open=""><summary>What does seri silkworm feed on?</summary><p id="e186999d-9c16-4c1d-8b2f-6e1f7223d3b9" class="">Mulberry leaves</p></details></li></ul><ul id="2c251756-8391-48ec-98c7-8ff243054d97" class="toggle"><li><details open=""><summary>Name two countries that produce more than 60% of the world’s silk production</summary><p id="7f909e62-0d11-47f1-a471-61e71b8eff83" class="">China and India are two countries that produce more 60% of the world’s silk production.</p></details></li></ul><ul id="3e87d8fc-9ce0-46e3-9b00-bc8a19767878" class="toggle"><li><details open=""><summary>Write down any two features of natural silk thread.</summary><ol type="1" id="2d23f183-9d78-4571-8f92-d8830e1360c4" class="numbered-list" start="1"><li>It is shiny, attractive, and durable.</li></ol><ol type="1" id="3e81f9c7-ab84-4525-9001-380e82aeedc0" class="numbered-list" start="2"><li>It has high elasticity and tensile strength.</li></ol><ol type="1" id="e9fe4813-e321-436e-ac2c-d21096b2b797" class="numbered-list" start="3"><li>Silk does not decay easily, so it is used in surgical stitching.</li></ol></details></li></ul><ul id="5182a25f-738d-42d6-b2a1-6c10262919da" class="toggle"><li><details open=""><summary>Name the countries, in which sericulture has been established as main industries?</summary><p id="13569820-4716-43e6-ba01-7445978c5a27" class="">China, Korea, Brazil, Russia, India, France and Japan</p></details></li></ul><ul id="2dbcae20-02e4-46de-80b5-6d2da6fe24bf" class="toggle"><li><details open=""><summary>What is sericulture?</summary><p id="0ee11770-02e4-47d0-987e-1e2998d6bfa3" class="">The rearing of silkworms for the commercial production of silk fibre is known as sericulture.</p></details></li></ul><ul id="9670deac-6b24-4614-be30-b64392706899" class="toggle"><li><details open=""><summary>Write any two features of the larva of silkmoth</summary><ol type="1" id="fcd9c5f8-f8ed-432e-a0b1-d4b7a96a81b5" class="numbered-list" start="1"><li>The larva of silkmoth is a voracious eater (feeder)</li></ol><ol type="1" id="c62cb3db-6154-4c9f-90b0-9231bdf1a50c" class="numbered-list" start="2"><li>Its body parts can be divided into head, thorax and abdomen.</li></ol></details></li></ul><ul id="cfdf02e5-d4bc-41b8-a518-51f7ec70d281" class="toggle"><li><details open=""><summary>How many types of silk moths are reared in Nepal? What are they?</summary><p id="564d8992-9855-4ddd-988e-e424d72da005" class="">Generally, two types of silk moths are reared in Nepal.</p><p id="2becbc34-0dab-4b23-9350-c4971c77e220" class="">They are:</p><ol type="1" id="2a40e844-32e6-4d24-886c-cd978174206d" class="numbered-list" start="1"><li>Seri silk moth</li></ol><ol type="1" id="ef376d73-b018-4aca-b18b-5ac2eabc0ea5" class="numbered-list" start="2"><li>Eri Silk Moth</li></ol></details></li></ul><ul id="ffe13b73-7b96-455e-9f06-09a967f12e14" class="toggle"><li><details open=""><summary>In how many days the life cycle of silkworm complete?</summary><p id="335278b2-8c47-4d21-a43b-e857f7ee42e3" class="">The life cycle of silkworm completes in 45 days.</p></details></li></ul><ul id="a252c0f8-b625-4515-b063-d70d99dc5526" class="toggle"><li><details open=""><summary>In which stage of its life cycle does silk produces silk ?</summary><p id="fa819dc6-0ece-42e7-bf1b-66e3f8f11af5" class="">Silkworm produces silk fibre in the larval stage.</p></details></li></ul><ul id="faaf1d52-2e7e-4067-ab07-4613c71b84c9" class="toggle"><li><details open=""><summary>Write down the scientific name of seri silkmoth and Eri Silkmoth</summary><p id="c4f5b5ff-79a6-487c-b8c6-a26b5867f94b" class="">Seri Silk moth: Bombyx Mori</p><p id="6db630bc-fa80-4581-9f4a-44f4539371c3" class="">Eri Silk Moth: Attaucs ricini</p></details></li></ul><ul id="60d6ffc8-2c71-4432-b17c-29dac110a8f6" class="toggle"><li><details open=""><summary>Where does a feamle silkmoth lay eggs?</summary><p id="72bfc872-0043-4f39-99fe-7478da63af3a" class="">A female silkmoth lays eggs on ventral surface of nulberry leaf.</p></details></li></ul><ul id="a1637e73-3eb4-43e8-8525-b357486dc374" class="toggle"><li><details open=""><summary>What is mating flight or nuptial flight?</summary><p id="0098dda5-c708-422b-9e00-ffc18c084e21" class="">A mature queen bee comes out of hive and fly in air for mating with drones. THis flight is called mating flight or nuptial flight</p></details></li></ul><ul id="e38a8313-77a2-4282-9af2-72181b940104" class="toggle"><li><details open=""><summary>What is the number of chromosomes in unfertilized egg of honeybee?</summary><p id="a97828e6-846c-4742-a31b-fe7d98fdbb50" class="">16</p></details></li></ul><ul id="844a4da3-4fb6-4ef5-a9ae-07b818cc79f2" class="toggle"><li><details open=""><summary>When does a queen bee mate with drones?</summary><p id="06f8e423-f3aa-4e30-8e0d-81f3725516d9" class="">The queen bee mates after 3-5 days of its emergence.</p></details></li></ul><ul id="6f542fd6-51c9-4536-8e96-ae67c37be3f7" class="toggle"><li><details open=""><summary>What are honey bees?</summary><p id="d14e3155-8f48-42e4-bd6b-b811294bb118" class="">Honeybees are social insects having high level of discipline and division of labour.</p></details></li></ul><ul id="d13c20c0-19b7-4e46-9a5a-0f69bd99315c" class="toggle"><li><details open=""><summary>Where do honeybees live?</summary><p id="3042d582-0658-4a22-bc10-07999b215489" class="">Honeybees live in hives.</p></details></li></ul><ul id="b76fb4da-77e7-42eb-bc2b-b8d95f014d79" class="toggle"><li><details open=""><summary>Write down two function of queen bee.</summary><ol type="1" id="597a910c-3f16-44e3-afb2-e408a7b65005" class="numbered-list" start="1"><li>To lay eggs.</li></ol><ol type="1" id="23799a15-08b5-4b1b-9b4a-8b1513e93c47" class="numbered-list" start="2"><li>To control and co-ordinate all the bees in hive.</li></ol></details></li></ul><ul id="270d4571-d251-4716-b83d-94e6ddd59cdb" class="toggle"><li><details open=""><summary>How many eggs are laid by queen bee in a day?</summary><p id="b9b8e741-27cf-4398-afae-8009259102b5" class="">About 3000 eggs are laid by queen bee in a day.</p></details></li></ul><ul id="df76bedf-7ce0-4d53-90b6-1939bafeabc7" class="toggle"><li><details open=""><summary>Write any two features of the eggs of honeybee.</summary><ol type="1" id="4700b612-0ae0-44e4-b89f-ceb3ae232d28" class="numbered-list" start="1"><li>The eggs ae white</li></ol><ol type="1" id="2200ee75-1528-44e7-95ca-6ca814c3e2f2" class="numbered-list" start="2"><li>The eggs are elongate.</li></ol></details></li></ul><ul id="65d441e7-1c16-44f3-abd3-591cecbc9f01" class="toggle"><li><details open=""><summary>How does larva that develops into queen differ from the larva that develops into worker bee?</summary><p id="f2aaf9ea-8a08-4349-9915-800ff756c6ed" class="">The larva that develops into queen is larger than the larva that develop into worker bee.</p></details></li></ul><ul id="eb98bf1a-3e61-4ae5-a7fc-7ed9d421c35a" class="toggle"><li><details open=""><summary>How many times does the larva of honey bee moult?</summary><p id="707607a0-a651-499b-9c7e-f9ed32de00d3" class="">The larva of honey bee moults for 4-5 times.</p></details></li></ul><ul id="2e5e80e8-716f-4b5c-9426-2d8c11e016cb" class="toggle"><li><details open=""><summary>What is royal jelly?</summary><p id="820a50e8-df5a-481d-a8f4-efb2ce3e2e56" class="">Royan jelly is highly nutritious food produced by salivary glands of worker bee.</p></details></li></ul><ul id="396b553f-4b7f-40a4-9a94-2ffc12b67b2d" class="toggle"><li><details open=""><summary>What is the life span of the larva of honey bee?</summary><p id="51dfd67f-6799-4fa5-8aea-df005e76f863" class="">The life span of larva of honeybee is 5.5 to 6 days.</p></details></li></ul><ul id="cb2f1859-d075-43ee-82ac-8bbe9e45f1ce" class="toggle"><li><details open=""><summary>What is fed to the larva to produce it into queen bee?</summary><p id="58407b89-6712-4d99-8c17-d9bae83703ba" class="">Royan jelly is fed to the larva to produce it into queen bee.</p></details></li></ul><ul id="c0209f6e-9db3-4bdd-9057-1b55e7b0be5a" class="toggle"><li><details open=""><summary>What do honey bees eat?</summary><p id="5f86cf9e-98e1-405e-8c46-1e9bb099be00" class="">Honeybees eat nectar of flowers.</p></details></li></ul><ul id="cca56590-7641-487d-bcd5-abebe3a232f5" class="toggle"><li><details open=""><summary>Name different types of honeybess that are found in hives</summary><ol type="1" id="4fab934d-9f7a-42af-84c6-eb7ebc5db447" class="numbered-list" start="1"><li>Queen bee</li></ol><ol type="1" id="64ec088b-0c42-4e8e-9bf0-89eb2f3004a3" class="numbered-list" start="2"><li>Drone bees(male)</li></ol><ol type="1" id="3adff6df-d1b7-46af-8de7-25555e70012c" class="numbered-list" start="3"><li>Worker bees</li></ol></details></li></ul><ul id="15638e0e-b5c7-486a-975c-649ab096f92a" class="toggle"><li><details open=""><summary>Write any two features of the queen bee.</summary><ol type="1" id="33be00ee-a3bc-4768-b466-119916f11e4a" class="numbered-list" start="1"><li>It is the largest bee found in the hive.</li></ol><ol type="1" id="14883b6b-ca44-4308-a7f0-e854e7272920" class="numbered-list" start="2"><li>Its head is small and round.</li></ol></details></li></ul><ul id="b89a5391-fede-4bd6-a7ee-cb8f38aef4ff" class="toggle"><li><details open=""><summary>Write any two features of drone bee.</summary><ol type="1" id="dce3a08d-1b71-493a-aa8b-d6fae094aa33" class="numbered-list" start="1"><li>It is smaller than queen bee and larger than worker bee.</li></ol><ol type="1" id="1453a7a6-5fd6-41e7-ae26-b1d019c12238" class="numbered-list" start="2"><li>Its body is black and hairy.</li></ol></details></li></ul><ul id="24de18b6-a45a-42b0-8a65-e70057b4ac5d" class="toggle"><li><details open=""><summary>Name the types of mouth parts found in worker bee.</summary><p id="d326056b-c03c-4fba-9758-546152c165dd" class="">Chewing and Capping type of mouth prats are found in worker bee.</p></details></li></ul><ul id="e78134b1-5b06-455d-a32d-5e0813be6e6b" class="toggle"><li><details open=""><summary>Write down the major function of drone bee.</summary><p id="5305a8de-1258-4656-98db-b5c6fc5f7030" class="">The major function of drone bee is to fertilize the feamle (queen)bee.</p></details></li></ul><ul id="fc93dcdb-b5d8-433d-8ab6-64e7029ab311" class="toggle"><li><details open=""><summary>In what many stages does the life cycle of honey bee complete? What are they?</summary><p id="3f5f53ca-3ee3-4b3b-bdd6-aa4dcb0ca181" class="">The life cycle of honey bee completes in 4 distinct stages: They are.</p><ol type="1" id="66147ef9-cb68-4331-b8b7-16a65f0dfd29" class="numbered-list" start="1"><li>Egg</li></ol><ol type="1" id="70a9873e-62e0-45f1-96e8-bea12ecf01e6" class="numbered-list" start="2"><li>Larva</li></ol><ol type="1" id="c71b4d6f-ac34-4198-858d-79f400afa395" class="numbered-list" start="3"><li>Pupa</li></ol><ol type="1" id="4122f749-782d-4ace-840c-d0212717dc49" class="numbered-list" start="4"><li>Adult</li></ol></details></li></ul><ul id="59f02770-19a5-4b74-9825-71ca5b3d3b49" class="toggle"><li><details open=""><summary>Write down any two features of worker bee </summary><ol type="1" id="930fd336-ab3f-4f5b-82d6-6fde69836a26" class="numbered-list" start="1"><li>It is the smallest bee in the hive.</li></ol><ol type="1" id="41cf36d7-fca1-48db-8633-b114bc80a6ee" class="numbered-list" start="2"><li>It is a sterile female.</li></ol></details></li></ul></div></article></body></html>

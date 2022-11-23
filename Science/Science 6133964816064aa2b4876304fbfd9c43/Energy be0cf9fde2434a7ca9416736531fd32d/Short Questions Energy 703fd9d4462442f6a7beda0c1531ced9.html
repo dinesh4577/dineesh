@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Short Questions: Energy </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="703fd9d4-4624-42f6-a7be-da0c1531ced9" class="page sans"><header><h1 class="page-title">Short Questions: Energy </h1></header><div class="page-body"><ul id="9f9cb2de-bba2-4f70-897a-d39c7929b5ed" class="toggle"><li><details open=""><summary>Justify with any two reasons that hydroelectricity is the best alternative source of energy in the context of Nepal.</summary><ol type="1" id="b68dbb1c-7d0d-4025-b17f-7b8b8a171aef" class="numbered-list" start="1"><li>Nepal is <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>n</mi><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{nd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> richest country in water resources. So, Nepal has very high potential for generating hydroelectricity.</li></ol><ol type="1" id="400a4427-7752-40a4-8094-0cb4e60aa665" class="numbered-list" start="2"><li>Hydroelectricity is cheap in a long term basis and it is a pollution free source of energy.</li></ol></details></li></ul><ul id="e3b06750-4d0d-45bb-8ca3-a6fa38da34fa" class="toggle"><li><details open=""><summary>Sun is also called an atomic power plant, why?</summary><p id="258f5cdc-a055-4394-85d5-481c10a12be5" class="">In the sun, enormous energy is produced continuously due to thermo-nuclear fusion reaction. Same amount of energy is produced in the atomic power plant in a nuclear station. Therefore, Sun is also called atomic power plant.</p></details></li></ul><ul id="a19b29de-0e12-4c1d-9b39-b422d03eafc7" class="toggle"><li><details open=""><summary>Why does the government of Nepal encourage farmers to establish biogas plant?</summary><ol type="1" id="12011d34-e36a-4f7f-a2d8-905386dfb1a3" class="numbered-list" start="1"><li>Biogas is renewable and cheap source of energy and energy can be generated very easily.</li></ol><ol type="1" id="bb4b4846-1779-4ae4-b4a6-0954fb49f37c" class="numbered-list" start="2"><li>The by-product of bio-gas is a good manure that increases the fertility of soil.</li></ol></details></li></ul><ul id="4e7f9feb-cc49-49a7-ac25-9d6c46fc7a6c" class="toggle"><li><details open=""><summary>Write any two difference between nuclear fission and nuclear fusion.</summary><table id="4967e1e9-a7c4-4aac-81bb-48c9111ec687" class="simple-table"><tbody><tr id="32a0c73b-63b8-4444-8c33-9bffc3110bfc"><td id="_IG^" class="">Nuclear fission</td><td id="RbGC" class="">Nuclear fusion</td></tr><tr id="eba64b80-f09f-481e-acc1-0ab3d8156d73"><td id="_IG^" class="">A heavy unstable nucleus breaks up to form two lighter nuclei.</td><td id="RbGC" class="">Two lighter nuclei combine to form a heavy nucleus.</td></tr><tr id="64e8dd0c-95ca-472e-98cd-ff0440c51851"><td id="_IG^" class="">Nuclear fission reactions have been controlled to generated electricity.</td><td id="RbGC" class="">Nuclear fusion reactions have not been controlled so far.</td></tr><tr id="f2ee5c74-7fa9-4e21-91e7-f08177ddb968"><td id="_IG^" class=""></td><td id="RbGC" class=""></td></tr></tbody></table></details></li></ul><ul id="0e5e0af9-5c0c-406b-9732-73ed7d85dbe2" class="toggle"><li><details open=""><summary>The government is giving high priority to solar energy. Why?</summary><ol type="1" id="0a4ec8c4-982f-4a03-ae82-1472e5de7f49" class="numbered-list" start="1"><li>Solar energy can be obtained in all parts of the country but bio-fuel can obly be obtained in those places where people raise cattle and have forests, agricultural lands etc.</li></ol><ol type="1" id="a5d8d336-fc8a-4e14-97be-a82835edd1c6" class="numbered-list" start="2"><li>The use of solar energy helps to reduce deforestation, as forest product are not essential to generate solar energy.</li></ol></details></li></ul><ul id="066f8775-3fc7-4aee-87ab-559cf4c1a645" class="toggle"><li><details open=""><summary>Energy crisis may occur in the world in near future. Write two reasons to justify this statement.</summary><ol type="1" id="57f1ca82-8fd3-4290-b5ff-445ba3302e1c" class="numbered-list" start="1"><li>The demand of energy sources is increasing due to high population growth.</li></ol><ol type="1" id="d9e9adcc-442e-4999-87f9-3e5aa69e1d6e" class="numbered-list" start="2"><li>There is overuse of non-renewable sources of energy like coal, disel, petrol etc.</li></ol></details></li></ul><ul id="6bc669b1-9d94-42d9-a7df-ce4ecddce8e7" class="toggle"><li><details open=""><summary>How to consumption of non-renewable energy can be reduced in our country?</summary><ol type="1" id="4b392f5a-f57e-457a-9024-f6d96eae9ac3" class="numbered-list" start="1"><li>Bio-gas should be used instead of LP gas.</li></ol><ol type="1" id="2d3471b3-aba6-49f4-a5ce-ddbccce66b18" class="numbered-list" start="2"><li>Electric vehicles should be developed instead of vehicles that run by fossil fu</li></ol></details></li></ul><ul id="b5ead7aa-ad56-4f2e-a1b5-c8d50f86bf70" class="toggle"><li><details open=""><summary>Suggest any two alternative ways to prevent the energy cris in the context of Nepal.</summary><ol type="1" id="22085390-de67-4a53-8858-41d75c51fbc8" class="numbered-list" start="1"><li>Bio-fuel energy should be developed by applying modern technology.</li></ol><ol type="1" id="39ff111b-8d1b-4fe6-8be3-f3eafafcc35b" class="numbered-list" start="2"><li>In most parts of our country, wind blows at very high speed almost all the time. So, electricity should be generated by using wind energy.</li></ol></details></li></ul><ul id="b34dcef3-575c-4f4d-908f-1cb93bb62bf9" class="toggle"><li><details open=""><summary>Why is the use of wood as a fuel is not advised although forests can be replenished?</summary><ol type="1" id="54984393-35bf-4a31-aabf-78c014a3d1a6" class="numbered-list" start="1"><li>While burning firewood, smoke is produced which causes air pollution.</li></ol><ol type="1" id="e9acfe6f-0456-4298-a1d0-28c3b887e140" class="numbered-list" start="2"><li>Widespread use of firewood leads deforestation which affects rain cycle.</li></ol></details></li></ul><ul id="dc450923-50d1-409a-a3e2-6eff9aea6c9c" class="toggle"><li><details open=""><summary>Energy contained in fossil fuels is the outcome of solar energy, why?</summary><p id="1decbdea-9341-4845-b2a7-11bf18836f59" class="">Plants get energy from the sun during photosynthesis and animals get this solar energy by eating plants. And we know, fossils fuel are obtained from the relics of plants and animals buried under the earth crust. Therefore,energy contained in fossil fuels is the outcome of solar energy.</p></details></li></ul><ul id="6acaaf56-1646-456a-9e6d-d2c85623dd39" class="toggle"><li><details open=""><summary>Difference between renewable and non-renewable source of energy.</summary><table id="44a394e4-7fab-46dd-9c7f-ad3103907a69" class="simple-table"><tbody><tr id="967cd880-81b0-4b04-9ca3-02c5969ab0b7"><td id="wTXM" class="">Renewable </td><td id="s~Hj" class="">Non-renewable</td></tr><tr id="ea312d4b-5276-4439-b689-a8da47a95780"><td id="wTXM" class="">It can be renewed or replaced shortly after it is exhausted at its origin place.</td><td id="s~Hj" class="">It cannot be replaced shortly after it is exhausted in its origin place.</td></tr><tr id="8821db04-bc37-4a07-a804-21acc2cb0a09"><td id="wTXM" class="">It cannot be stored generally.</td><td id="s~Hj" class="">It can be stored.</td></tr><tr id="95625ffe-8936-49b7-bf03-ad29c06c3dd8"><td id="wTXM" class="">Eg: Solar energy, bio-gas etc</td><td id="s~Hj" class=""> Eg: petrol, coal, disel etc.</td></tr></tbody></table></details></li></ul><ul id="277e16fd-49bf-4782-ae59-4cd3617eef29" class="toggle"><li><details open=""><summary>“The sun is considered as the main source of energy.” Justify this statement.</summary><p id="287bca87-39e9-4122-982a-100d69012b9a" class="">The sun provides energy for all living beings on the earth indirectly. We use solar energy for cooking, drying clothes, generating electricity etc. Fossil fuels are also outcome of solar energy. Hydropower is also can outcome of solar energy. We know, due to temperature difference of air wind energy can be generatred but the temperature difference is caused by sun. Hence, the sun is considered as the main source of energy.</p></details></li></ul><ul id="fa46cc8b-42d0-44b7-aebe-8b7802711b90" class="toggle"><li><details open=""><summary>Fossil fuel is known as non-renewable source of energy. Why?</summary><p id="bee4dfee-0bcf-4250-b99c-0e6d23610923" class="">FOssils fuel get depleted and cannot be produced again and again as it has a limited stock in nature. So, fossil fuel is known as non-renewable source of energy.</p></details></li></ul><ul id="a12627da-f0d6-4e1a-81ab-44d6cd06a541" class="toggle"><li><details open=""><summary>Give two reasons to justify that the use of hydroelectricity should be increased more than that of fossil fuel energy.</summary><ol type="1" id="881c22a5-a7fb-4fc5-9c6d-132fe04e5021" class="numbered-list" start="1"><li>Hydro-electricity is a renewable source of energy but fossil fuels are non-renewable source of energy.</li></ol><ol type="1" id="059fa6d1-6e99-4281-b63e-823a2bd9ff2d" class="numbered-list" start="2"><li>Hydro-electricity is a pollution free source of energy but fossil fuel causes air pollution when they are burnt or used.</li></ol></details></li></ul><ul id="e8261b38-beb8-4139-8a8c-2df92a7e36c0" class="toggle"><li><details open=""><summary>“In fact, hydroelectricity is an indirect source of solar energy.”. Justify this statement.</summary><p id="66e3bb7f-516e-4f31-906b-7c4e1f3762b5" class="">To generate hydro-electricity, running water is used. But this water cycle is impossible in the absence of solar energy. Therefore, hydro-electricity is an indirect source of solar energy.</p></details></li></ul><ul id="9e24a61a-03e6-4f58-be34-e2f72bdf5b07" class="toggle"><li><details open=""><summary>Write any two differences between fossil fuel and bio-fuel.</summary><table id="939d7f56-a400-4c9e-8eb6-10899e9069ae" class="simple-table"><tbody><tr id="3c29df98-3c76-4b67-abc2-3ca3d664a3c6"><td id="YGjo" class="">Fossil fuel</td><td id="=Ypd" class="">Bio-fuel</td></tr><tr id="0ab3e1c6-b792-4ea3-81ba-84a8c32a8266"><td id="YGjo" class="">It is non-renewable source of energy.</td><td id="=Ypd" class="">It is renewable source of energy.</td></tr><tr id="9a29dd0c-0307-46ea-bd97-c1d1e83e0f98"><td id="YGjo" class="">It causes more and severe air pollution.</td><td id="=Ypd" class="">It causes very less air pollution</td></tr><tr id="57145e03-b19d-4797-9f0e-ea3f49cc408c"><td id="YGjo" class=""></td><td id="=Ypd" class=""></td></tr></tbody></table></details></li></ul><ul id="03d80b2f-2e75-4295-be01-c07a3f68d509" class="toggle"><li><details open=""><summary>Energy crisis cannot be solved immediately, but it can be pushed up to the next generation.Give reason</summary><p id="eb1ee633-50c9-455a-bb92-1816314fa445" class="">Energy crisis cannot be solved immediately, but it can be pushed up to the next generation because the population of the world is increasing day by day. So, the demand of energy like petrol, diesel etc. are also increasing throughout the world. Also, the needs of heat, light energies , power are increasing which is mostly dependent on petroleum products. And we know that, these fossil fuel are in limited stock in nature and cannot last longer.</p></details></li></ul><ul id="7ff39d43-0163-454e-8656-b55de643db69" class="toggle"><li><details open=""><summary>What are the main reasons of energy crisis? Write any two</summary><ol type="1" id="71c2eacf-8de3-4a86-8090-6411fd878911" class="numbered-list" start="1"><li>High demand of energy due to rapid population growth.</li></ol><ol type="1" id="4e4c84c3-ef3c-4f69-83be-9461d95003e3" class="numbered-list" start="2"><li>Over use of non-renewable source of energy like petroleum products.</li></ol></details></li></ul><ul id="c410fdde-0bfb-48d6-8b6a-09a0f8175f84" class="toggle"><li><details open=""><summary>Large amount of energy is produced during the fission of Uranium atom. GIve reason.</summary><p id="ab58bdee-6efc-47e6-bfff-5729b6d2bed5" class="">When Uranium-235 atoms are bombarded with slow moving neutrons, the heavy Uranium nucleus splits up to produce two lighter atoms i.e. Barium-139 and Krypton-94 with the emission of 3 neutrons. During this reaction, some mass of Uranium is lost which produces an enormous amount of energy.</p><figure id="2e61315b-37e7-4f52-babc-0c7b290ec57a" class="image"><a href="Short%20Questions%20Energy%20703fd9d4462442f6a7beda0c1531ced9/Untitled.png"><img style="width:862px" src="Short%20Questions%20Energy%20703fd9d4462442f6a7beda0c1531ced9/Untitled.png"/></a></figure></details></li></ul><ul id="15a99707-8d19-4b85-8853-f25f2a2e67da" class="toggle"><li><details open=""><summary>In the present world, the use of hydroelectricity is increasing. Write any two reasons.</summary><ol type="1" id="fe334e13-aa53-4708-ab3f-ae4025091945" class="numbered-list" start="1"><li>The use of petroleum products are increasing, and demand of electrical energy is also increasing.</li></ol><ol type="1" id="ba8ed5af-637f-45fd-8441-e0ffce8dfcc0" class="numbered-list" start="2"><li>Urbanization is increasing day to day due to high population growth.</li></ol></details></li></ul><ul id="da9e12d1-e97d-454b-8c87-36fd63765183" class="toggle"><li><details open=""><summary>Why should energy be conserved? Mention any two steps you would take at home to conserve energy.</summary><p id="d9b36609-6178-41a8-b41e-cbb14c68b0fe" class="">Energy should be conserved to push energy  crisis further as the world is facing acute scarcity of energy sources.</p><p id="30cd4373-5f57-4136-a686-e25b720a4055" class=""> The two steps I would follow to conserve energy at my house are:</p><ol type="1" id="30316c69-7df5-4ea9-97de-64b5b06ccef3" class="numbered-list" start="1"><li>I will not light bulb and operate electrical devices when not required.</li></ol><ol type="1" id="9c06bfcc-a627-4049-92e5-9aebe7c3ebc0" class="numbered-list" start="2"><li>I will use biogas to cook food instead of LP gas.</li></ol></details></li></ul><ul id="340d1daf-1883-403e-a987-c79cdeee7419" class="toggle"><li><details open=""><summary>“The use of solar energy should be increased in the context of Nepal.” Give any two reasons to justify this statement.</summary><p id="1907a04b-98b3-46f0-a9dd-e9d58284c0c4" class="">The use of solar energy should be increased in context of Nepal because:</p><ol type="1" id="a5973fb2-ada7-4ede-9006-2d443bb414c5" class="numbered-list" start="1"><li>Solar energy is a renewable source of energy and can be obtained continously.</li></ol><ol type="1" id="b810123f-6077-4e63-8bd2-235d3eec12b7" class="numbered-list" start="2"><li>Solar energy is a pollution-free energy source.</li></ol></details></li></ul></div></article></body></html>

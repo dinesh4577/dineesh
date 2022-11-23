@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Force-Short Questions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2c535505-eb89-400e-9b49-e951249572e0" class="page sans"><header><h1 class="page-title">Force-Short Questions</h1></header><div class="page-body"><ul id="37e31b97-fcbc-4ec4-967d-f99999e64e3b" class="toggle"><li><details open=""><summary>Why Newton’s law of gravitation is called universal law?</summary><p id="369c6a84-b24a-400a-b152-ae3e214004dd" class="">Newton&#x27;s law of gravitation holds true for all objects present in this universe whether the terrestrial or celestial body, the force of gravitation exists everywhere in the universe. Even for small microscopic elements like protons, and electrons in an atom. Newton&#x27;s law of gravitation holds good. So, it is called universal law.</p></details></li></ul><ul id="af53dc60-471e-48eb-ab31-f9bb36678f02" class="toggle"><li><details open=""><summary>Why is gravitation constant called the universal gravitational constant?</summary><p id="a68541ca-4738-4ae7-bab7-f9d09dbaa5db" class="">Gravitational constant is called universal gravitational constant because:</p><ol type="1" id="05f851cf-5b3d-46b3-b172-4193f57b27f2" class="numbered-list" start="1"><li>It does not depend upon nature of mass of objects.</li></ol><ol type="1" id="828e1887-e8ab-4ca5-b8ed-293cf9eaa946" class="numbered-list" start="2"><li>It does not depend upon chemical composition of object</li></ol><ol type="1" id="38789636-3d53-44a5-9c3a-7edc1a665203" class="numbered-list" start="3"><li>It is unaffected by temperature and pressure.</li></ol><ol type="1" id="671eee07-b187-4008-8947-6febfe87840a" class="numbered-list" start="4"><li>It is independent of the medium in which masses are placed.</li></ol></details></li></ul><ul id="abec1f8d-dc43-473a-b667-3b57173807c2" class="toggle"><li><details open=""><summary>On what condition, the gravitational force is equal to gravitational constant?</summary><figure id="e53d8e81-e73d-4ffa-a34e-184b7ad92d93" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled.png"><img style="width:341px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled.png"/></a></figure><p id="1e84ed3a-40b3-4b5e-947e-330bedd070ee" class="">When the two objects of unit masses are separated by a unit distance, the force of gravitation is equal to the gravitational constant.</p><figure id="5c5fef67-fab6-4abe-be77-aaa7374a9ee9" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%201.png"><img style="width:294px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%201.png"/></a></figure><p id="ff08656a-e7d6-4739-8827-d60a6c2a98a8" class=""> </p></details></li></ul><ul id="95994b00-4ef4-4b35-8ed2-94c6ed551037" class="toggle"><li><details open=""><summary>According to Newton’s law of gravitation every particle of matter attracts every other particle. But bodies on the surface of the earth never move toward each other on account of their force of attraction. Why?</summary><p id="49279e71-464a-4253-830f-15471c1fd90b" class="">There is force of attraction between earth and particles on earth’s surface. Also, there is forcee of attraction between these particles themselves. The force of attractionn between a particle and earth is much greather as compared to gravitational attraction between two particles of earth’s surface. So, particles on earth’s surface never move towards each other.</p></details></li></ul><ul id="33eda404-3583-477b-b39f-cfe852c15c76" class="toggle"><li><details open=""><summary>Why is gravitational force between ordinary sized bodies not noticed?</summary><p id="3a517fd4-8527-4394-bca0-822c004c86f1" class="">The gravitational force between ordinary sized bodies is very small and hence such smaller force is not felt in practice.</p><figure id="0b924e2a-590e-4f18-9ccd-d3fccb9ad723" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%202.png"><img style="width:865px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%202.png"/></a></figure></details></li></ul><ul id="152bd8fc-7f45-40cc-aff6-c00a35840cd3" class="toggle"><li><details open=""><summary>Tides occurs in sea, why?</summary><p id="79e9b5aa-fbf4-43ee-b0c7-256ad3bcb6a8" class="">There is gravitational force between the moon and earth. As water molecules are not tightly compacted as solid, tides occurs in sea.</p></details></li></ul><ul id="92a432e5-407b-4713-8076-e63dbd9e1ab5" class="toggle"><li><details open=""><summary>The earth’s orbit is oval in shape. Explain how the magnitude of the gravitational force between the earth and the sun changes as the Earth moves from position ‘A’ to ‘b’ as shown in the figure.</summary><figure id="d1b8ecf8-82c9-44cf-9acc-51d3144b7bb9" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%203.png"><img style="width:429px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%203.png"/></a></figure><p id="e61c7898-df28-4184-9cae-4c7b9e58e4b4" class="">According to Newtons law of gravitation, the gravitational force is inversely proportional to the square of distance between the centers of sun and earth.</p><p id="85573b05-7fdb-4f0e-b68c-c8c822122102" class=""> When earth is at position A, the distance between the center of sun and earth is smaller as compared to the position B of the earth. So due to change in distance between them, the force of gravitation also changes.</p><p id="6d3117d4-7581-4f7c-ac6a-4991011b0e9a" class="">  Hence, Gravitational Force at Position A &gt; Force at positon B.</p></details></li></ul><ul id="2a822eea-fe38-42c1-abdf-025f942b6a99" class="toggle"><li><details open=""><summary>Two masses “m2” and ‘m2’ are kept at a distance ‘d’ . If we put water between them instead of air, what change will occur in gravitational force?</summary><figure id="5081cbdb-33e5-4488-952a-9eba524342e1" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%204.png"><img style="width:432px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%204.png"/></a></figure><p id="ca08747b-76c5-4f27-9ff6-8bde2ea6f430" class="">The gravitational force between two bodies doesnot depend upon the nature of medium between them. So, gravitational force between masses m1 and m2 is same whatever the medium like air, water, glass etc between them.</p></details></li></ul><ul id="722f2a51-c958-4ec0-96c8-ab15c93e4620" class="toggle"><li><details open=""><summary>A meteor is falling towards the surface of earth. THe force of attraction towards meteaor by earth is action, what is its reaction</summary><p id="9ee59eed-360c-4afc-8654-988ea4f20c17" class="">The gravitational force between two bodies constitutes on action and reaction pair. If the force exerted by erarth on the meteor is action, then the force exerted by meteor on earth is reaction.</p><figure id="a26fb5b7-2a54-463d-8647-3018bb95ebda" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%205.png"><img style="width:296px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%205.png"/></a></figure></details></li></ul><ul id="d2728020-9466-4994-ae64-b65f7571a5cb" class="toggle"><li><details open=""><summary>Two sheet of paper of equal masses one made into a ball and another unfloded, are dropped simultaneously from the same height, which one will strike the ground first and why?(earth)</summary><p id="8f09c7f2-6a25-48f6-b963-5a80b936ed64" class="">The paper sheet made into ball drops faster than unfolded paper because the unfolded paper will experience a larger air resistance due to its larger surface area.</p></details></li></ul><ul id="b077bab4-514b-4088-ab96-d91130b27657" class="toggle"><li><details open=""><summary>If a big and a samll stone are dropped simultaneously from a certain height on a vaccum , which one will strike the ground first and why?</summary><p id="9efcd229-d806-428d-9b5f-84f6f87eb46c" class="">In vaccum, both the stones reach the ground together because acceleration produced in a freely falling body is same for all bodies and it does not depend upon the mass of falling bodies.</p></details></li></ul><ul id="3085fcd1-965f-43a4-b744-07ad8a63e562" class="toggle"><li><details open=""><summary>Under what condition does a feather and an iron ball dropeed simultaneously will strike the ground together? Explain, why?</summary><p id="ef21bb8c-00e7-4519-a801-92edee9f971d" class="">If there is no any external resistance in vaccum, the acceleration produced in the freely falling bodies is same for all bodies. So, feather and iron ball strike the ground together.</p></details></li></ul><ul id="c5b1c16c-1b02-4ea3-b49e-52deca29e467" class="toggle"><li><details open=""><summary>What is the conclusion of coin and feather experiment?</summary><p id="55750a28-2cdc-4f80-9620-a0fefa1022db" class="">If there is no any external resistance. i.e in vaccum, a coin and a feather reac the ground together as the acceleration produced in freely falling bodies is same for all bodies and it doesn’t depend upon the mass of the falling bodies.</p></details></li></ul><ul id="6ebb02d4-c67d-4752-a63c-8718065e14cf" class="toggle"><li><details open=""><summary>In which condition the acceleration of a parachute is zero?</summary><p id="6397b179-e3c7-46d1-b24a-e10fa8ad6f7e" class="">When parachutists jump from a great height, the force of gravity of the earth pulls towards its centre. At the same time, the upthrust of air pushes it upwards. The air resistance increases with the increase in velocity of the parachute. As a result, the force by which parachutes fall down towards the surface of earth will be equal to the upthrust of air, at that time the acceleration becomes zero and it falls at a constant velocity.</p></details></li></ul><ul id="a190b1df-0e0a-4b89-988a-51118cf66beb" class="toggle"><li><details open=""><summary>Parachutists are not hurt even when they jump out of a plane from a very high place, why?</summary><p id="408a628f-ab75-4219-a693-e81addf2663d" class="">When parachutists jump out of a plane from high place, parachute opens and expands due to the upthrust of the air. This causes the acceleration as zero as a result of which the velocity of the parachute becomes low and balanced. Thus, parachutists are not hurt even when they jump out of a plane.</p></details></li></ul><ul id="00e1b9c1-5c2e-46f1-afc9-a371b1914aea" class="toggle"><li><details open=""><summary>At what condition does the falling parachute have no acceleration?</summary><p id="de36f45f-ee7e-4dd0-ae42-64dd8df049f7" class="">If the force of gravity and upthrust of air is equal and opposite in direction, then falling parachute have no acceleration.</p></details></li></ul><ul id="9ed50ea0-cec2-4d44-a188-b54f30952ff6" class="toggle"><li><details open=""><summary>What will be the effect of acceleration due to gravity while jumpoing with a parachute?</summary><p id="cfc62919-6021-4e11-8147-3f8d2bb62efc" class="">Whiling jumping with a parachute, the force of gravity and upthrust of air become equal and the acceleration due to gravity becomes zero. And hence parachute falls at constant velocity.</p></details></li></ul><ul id="488c31de-b9c6-446c-b3b4-ed8d52f4386d" class="toggle"><li><details open=""><summary>Where is the value of g greater and why, at poles or at the equator?</summary><figure id="68cd105d-4875-4358-b66b-e9a4f46df175" class="image"><a href="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%206.png"><img style="width:633px" src="Force-Short%20Questions%202c535505eb89400e9b49e951249572e0/Untitled%206.png"/></a></figure><p id="736de3f2-5444-42a9-8c7d-8ab3e4abca40" class="">The value of ‘g’ is greater at the poles because g is inversely proportional to the square of radius of earth and radius of earth is less at poles than at the equator.</p></details></li></ul><ul id="78c7d035-2379-4c5f-9a32-dee231481e48" class="toggle"><li><details open=""><summary>Why does the value of acceleration due to gravity vary place to place on the surface of the earth?</summary><p id="ef1e7229-a851-4459-b27e-7672908fea9b" class="">The value of acceleration due to gravity is inversely proportional to the square of the radius of earth.</p><p id="62eb0064-dd61-43ef-8678-4e987a55522a" class=""> The earth is not perfectly spherical. It is flat at poles and bulged at equator. So, the radius of earth varies from place to place. As a result, the value of g also varies from place to place.</p></details></li></ul><ul id="26a23369-bbcd-4b4f-8c15-10cbe27fda29" class="toggle"><li><details open=""><summary>Why is the value of ‘g’ more in Terai than in the mountain?</summary><p id="6a0da8d3-6a35-4e60-9be0-3522fd543ccf" class="">The acceleration due to gravity (g) is inversly proportional to the radius of earth. As radius of earth is less at Terai region, so acceleration due to gravity is more in Terai than in mountain region. </p><p id="e13d93a8-6fce-48f5-addf-595a2b6b00c5" class="">
+</p></details></li></ul><ul id="406a2979-ab40-4e66-9f91-74579265e7d2" class="toggle"><li><details open=""><summary>Why is the weight of an object more at polar region than that in the equatorial region of the Erath?</summary><p id="811c5aaa-7c37-4881-a076-d3033f606bae" class="">Acceleration due to gravity is inversely proportional to the radius of earth. So, at pole the value of ‘g’ is greater than in equator.</p><p id="f73c8465-9260-4bf0-af3b-844bb42d0380" class="">Also,</p><p id="92dc5232-4c54-44e2-b203-c3a8ac1b7434" class="">Weight, W=mg</p><p id="3fae16af-5ab7-4a8a-83fb-3074e3c82b51" class="">Also, Weight is directly proportional to acceleration due to gravity. So, weight of an object is more at polar region</p></details></li></ul><ul id="bf79debd-9a4f-47fe-9d81-2addc445b2e8" class="toggle"><li><details open=""><summary>Why does a body dropped from the same height reach the ground quicker at the pole than at the equator of the earth?</summary><p id="f891aee8-b1fe-4239-8db7-8b62c640a942" class="">The value of ‘g’ is more at the pole than at the equator as the radius of earth is less at poles and g is inversely proportional to the square of radius. The force of gravity is more at poles than at equator. So the body reachthe ground quicker at poles although dropped from same height.</p></details></li></ul><ul id="e85176e8-aa93-45e2-afce-b7b0c7d684e8" class="toggle"><li><details open=""><summary>If Kathmandu lies in high altitude than Bhatnagar from sea level, then where does an object have more weight between two places? Why?</summary><p id="c123115c-588d-44ed-8309-16f22929bdb6" class="">The weight of an object depends upon acceleration due to gravity. But the value of ‘g’ is inversely proportional to the radius of earth. </p><p id="4838ccd2-2fa0-4988-b6ca-c3091d96b1ed" class=""> We know, if Kathmandu is at heigh altitude then the value of ‘g’ will be less than in Biratnagar. Hence, the weight of object is also less in Kathmandu. This, the object have more weight in Biratnagar.</p></details></li></ul><ul id="f370ffc7-1322-4dc8-b3d5-7e41bdf22e08" class="toggle"><li><details open=""><summary>Why is the weight of an object zero at the centre of the earth.</summary><p id="49e862d0-860e-4dbf-b84d-01e7f47c4ea0" class="">The formula of weight of an object is,</p><p id="991aaf88-7071-42c1-abce-2e931a82f49a" class="">W=mg</p><p id="fe12fe97-9a08-4d5b-9ebc-3aea5a232acf" class="">We know, at centre of earth the value of ‘g’ is zero. Hence,</p><p id="9932a00f-065e-4e07-9f86-13f9674aa90d" class="">W=m*0=0N</p><p id="f0477094-9fa9-49ce-aefd-dfbe107a26b2" class="">Thus, weight of an object is zero at the centre of the erath.</p></details></li></ul><ul id="e0f2433f-7b56-4b50-9e43-b85473ada127" class="toggle"><li><details open=""><summary>The weight of a body is least at the top of Mt.Everst than at the other places of the erath surfcae.Why?</summary><p id="840ce616-efa2-4df7-b625-51f3e70d570c" class="">At top of Mt. Everset, the radius of earth is highest. As we know, acceleration due to gravity is inversly proportional to the radius of earth. SO, the values of ‘g’ is minimum at the top of Mt.Everst.</p><p id="1eedec83-06b1-4059-862f-3c4af28383b5" class=""> Also, we know that, weight of an object is directly proportional to value of ‘g’. Thus, least value of ‘g’ will have least weight. Hence, the weight of body is least at the top of MT Everest than at other places.</p></details></li></ul></div></article></body></html>

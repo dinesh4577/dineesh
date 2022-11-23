@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Invertebrates: Short</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="49b4b03b-152a-4a53-a0e5-7e53e74f3b09" class="page sans"><header><h1 class="page-title">Invertebrates: Short</h1></header><div class="page-body"><ul id="31c35cb3-08c1-4935-b2a1-64f60830fc21" class="toggle"><li><details open=""><summary>Which state in the life cycle of silkworm will be affected immediately if the mulberry bush dies suddenly? Clarify the reason.</summary><p id="f8113d1d-db2f-46cb-ba48-ec0d9472222b" class="">The larval stage in the life cycle of silkworm will be affected immediately if the mulberry bush dies suddenly. Because larva of silkworm is a varacious eater (feeder). It needes a lot of mulberry leaves as food and it dies in the absense of mulberry leaves.</p></details></li></ul><ul id="c65f1846-a9b0-4fad-94b0-a9eec85478c1" class="toggle"><li><details open=""><summary>Why are silkmoths considered as useful insects? GIve any two reasons</summary><ol type="1" id="25a8714d-b689-4330-91de-3f6027ea419f" class="numbered-list" start="1"><li>Valuable silk fibre can be obtained which is used for making expensive clothes</li></ol><ol type="1" id="30c7929c-f697-45ed-b0d0-d88ee9cabedb" class="numbered-list" start="2"><li>Economic condition can be improved by seliing silk fibre and silk cloth.</li></ol></details></li></ul><ul id="a9f1c2a7-4c53-4ccb-9dac-8cfa599e8860" class="toggle"><li><details open=""><summary>Write any two differences between silkmoth and honeybee</summary><table id="5cce5de4-e89b-4aa9-bb2d-443bef06f7b3" class="simple-table"><tbody><tr id="04418fb1-ade1-4ac9-89f3-92e4ce92c407"><td id="dH^|" class="">Silkmoth </td><td id="Ko\}" class="">Honey bee</td></tr><tr id="2b1d1b4c-835a-4eb5-95e6-3f7b96b0d7a0"><td id="dH^|" class="">Its larva produces silk fibre</td><td id="Ko\}" class="">Honeybee produces honey</td></tr><tr id="6ad450f3-af56-4889-aa5f-eb6b4acbc047"><td id="dH^|" class="">Silkmoth is larger in size</td><td id="Ko\}" class="">Honeybee is smaller in size</td></tr><tr id="b80f9ceb-1347-403d-9141-eb659249db14"><td id="dH^|" class="">Silkmoth feed on mulberry leaves.</td><td id="Ko\}" class="">Honey bee feeds on nectar of flowers</td></tr><tr id="317b025d-a11b-4f8f-af4d-fc3044be9d0c"><td id="dH^|" class="">The produce of silkmoth  i.e silk is used as clothes.</td><td id="Ko\}" class="">The product of honey bee i.e honey is used as food.</td></tr></tbody></table></details></li></ul><ul id="f30882ea-54c1-4caf-b8be-f70c23faecfa" class="toggle"><li><details open=""><summary>Write any two difference between larva of silkmoth and larva of honeybee.</summary><table id="4bfd5638-ff3d-43f9-b023-1b5110c34e23" class="simple-table"><tbody><tr id="e8e5fb7d-3143-4397-8efa-7e23521f443a"><td id="ajWn" class="">Larva of silkmoth</td><td id="|=Ux" class="">Larva of honey bee</td></tr><tr id="cff8c55d-5e3a-499f-9587-1345e3c2f6e5"><td id="ajWn" class="">It lives in mulberry leaves.</td><td id="|=Ux" class="">It lives in hive</td></tr><tr id="f81f97dd-10aa-4d9b-babd-dd4869902ae2"><td id="ajWn" class="">It feeds on mulberry leaves.</td><td id="|=Ux" class="">It feeds on royal jelly</td></tr><tr id="47299502-e5bd-49d3-b49e-e18f3b6d3dd5"><td id="ajWn" class="">Larva of silkmoth feeds by itself.</td><td id="|=Ux" class="">Larva of honey bee is fed by worker bees.</td></tr><tr id="25289127-42f7-4e26-8a13-5e16bd1ddb08"><td id="ajWn" class="">The larval stage of silkworm completes in about 25 to 32 days.</td><td id="|=Ux" class="">The larval stage of honey bee completes in about 6 days.</td></tr></tbody></table></details></li></ul><ul id="fbd79a02-c7e4-45db-aa6b-48c4c6615857" class="toggle"><li><details open=""><summary>Write any two differences between adult silkworm and its larva.</summary><table id="4c68e55f-9b31-4a5b-82e1-28c857d0e91e" class="simple-table"><tbody><tr id="683f98d9-0ee5-4b88-bfae-b79125a3c890"><td id="ZGd\" class="">Adult silkworm</td><td id="ftuz" class="">Larva of silkworm</td></tr><tr id="fce49ed4-951f-4bd3-af4d-500e9383cb43"><td id="ZGd\" class="">It does not take food.</td><td id="ftuz" class="">It feeds on mulberry leaves.</td></tr><tr id="b31b5b34-8045-4be8-8b75-15272b7a8fff"><td id="ZGd\" class="">It does not produce silk fibre.</td><td id="ftuz" class="">It produces silk fibre.</td></tr><tr id="b6626a80-c192-4e31-a600-4ad3ff025bc5"><td id="ZGd\" class="">It can fly.</td><td id="ftuz" class="">It crawls.</td></tr><tr id="6993a409-9acc-4248-983f-76bca6ad6931"><td id="ZGd\" class="">It has wings and flat body structure.</td><td id="ftuz" class="">It has cylindrical body structure.</td></tr><tr id="233478db-1cfa-4aad-a6c1-6c807758430f"><td id="ZGd\" class="">It is the 4th or final stage in life cycle of silkworms.</td><td id="ftuz" class="">It is the 2nd stage in life cycle of a silkworm.</td></tr></tbody></table></details></li></ul><ul id="53364831-f37d-4481-b4af-3d821f40edcd" class="toggle"><li><details open=""><summary>Write any two differences between drone bee and queen bee.</summary><table id="80b7fea7-1f51-4531-a9a9-44fcc113914f" class="simple-table"><tbody><tr id="1e8c540d-098a-4b84-8c57-5d2d5b417ee7"><td id="~fZA" class="">Drone Bee</td><td id="wK@a" class="">Queen Bee</td></tr><tr id="15b0cedf-eb5a-45db-b890-641b72d3971d"><td id="~fZA" class="">It is male honeybee.</td><td id="wK@a" class="">It is a fertile female honeybee.</td></tr><tr id="8c9f9f58-91ca-4d6d-82f6-99bb34228c9c"><td id="~fZA" class="">It is smaller than queen bee.</td><td id="wK@a" class="">It is larger than drone bee.</td></tr><tr id="8b2bd5b9-93ec-4bfd-849f-2809af826f7e"><td id="~fZA" class="">Function of drone bee is to fertilize the queen.</td><td id="wK@a" class="">Function of queen bee is to lay eggs.</td></tr><tr id="e5c2f786-a4f6-49f2-a507-1b236955a346"><td id="~fZA" class="">There are hundreds of drone bee in a colony.</td><td id="wK@a" class="">There is only one queen bee in a colony.</td></tr></tbody></table></details></li></ul><ul id="ad070e5f-6174-4102-8e44-a001f5cc644e" class="toggle"><li><details open=""><summary>Write any two differences between drone bee and worker bee.</summary><table id="e278abd7-bba0-4653-98f9-304479a36968" class="simple-table"><tbody><tr id="56d39d5d-f6b0-44ae-84f7-2240f19370f2"><td id="VWYr" class="">Drone Bee</td><td id="yIYo" class="">Worker Bee</td></tr><tr id="50974422-5b39-4905-a195-c40e04c51939"><td id="VWYr" class="">Drone bees are sexually fertile.</td><td id="yIYo" class="">Worker bees are sexually sterile.</td></tr><tr id="857fb3c5-4095-40fb-93b0-54246e843089"><td id="VWYr" class="">It is a male bee.</td><td id="yIYo" class="">It is a female bee.</td></tr><tr id="8c2aba96-f167-49d6-90e9-e27170c7392e"><td id="VWYr" class="">It is a larger than worker bee.</td><td id="yIYo" class="">It is smaller than drone bee.</td></tr><tr id="a7e201bd-cadb-4a54-a035-f6fa55da1a60"><td id="VWYr" class="">Drone bees don’t have stings.</td><td id="yIYo" class="">Worker bees have stings.</td></tr><tr id="fb71fd9c-6119-4360-a6ef-ab86a6bb2a03"><td id="VWYr" class="">It fertilizes the queen bee.</td><td id="yIYo" class="">It collects nectar, protects the hive and feeds to larva.</td></tr><tr id="66ea9fbc-8dff-4ceb-8f18-55861aa0e679"><td id="VWYr" class="">There are few hundreds of drone bee in a colony.</td><td id="yIYo" class="">There are (20-80) thousands of worker bee in a colony.</td></tr></tbody></table></details></li></ul><ul id="9648722a-8d9d-498c-9771-05ea25c21657" class="toggle"><li><details open=""><summary>Write any two characteristics of larva of silkworm on the basis of body structure.</summary><ol type="1" id="6c72e531-5967-4086-98d6-9143a9e8d1be" class="numbered-list" start="1"><li>Its body can be divided into head, thorax and abdomen</li></ol><ol type="1" id="0a3ec663-1d18-4d16-bd01-c5fc752bf759" class="numbered-list" start="2"><li>It has pseudo legs and dorsal horn.</li></ol></details></li></ul><ul id="b91b43d1-a877-4742-9ac5-53f678f4d161" class="toggle"><li><details open=""><summary>Why are egges of silkmoth stored in cold during winter.</summary><p id="557c8943-7f68-476a-877c-2313e3cdf006" class="">The larva of silkmoth requirerd mulberry leaves as it is varacious feeder. After hatching of egg, larva of silkworm comes into the world but in winter, mulberry leaves are not available. So, to prevent the death of larva, egs of silkmoth are stored in cold during winter.</p></details></li></ul><ul id="5799c473-ca5c-4de9-a9d8-e2e61ea70429" class="toggle"><li><details open=""><summary>Why are purpae of silkmoth killed inside cocoon before extracting silk fibre?</summary><p id="5e66b68d-40f1-4a9b-96c0-4551d984bcfa" class="">Pupae of silkworm are killed inside cacoon in order to obtain single unbroken silk fibre.</p></details></li></ul><ul id="da09a6b4-ad58-4c8b-910f-845425b37095" class="toggle"><li><details open=""><summary>Why silkworm is called queen of fibre?</summary><p id="acdf4567-9a3a-475e-a540-948e933c645c" class="">The fibre produced by silkworm is shiny, long, attractive and durable. The silk fibre is the finest among all the other fibres. Therefore, silkworm is called queen of fibre.</p></details></li></ul></div></article></body></html>

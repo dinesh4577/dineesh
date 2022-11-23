@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Very Short Questions: Energy</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2234f5bd-0e9b-4647-bbbc-c701355ec644" class="page sans"><header><h1 class="page-title">Very Short Questions: Energy</h1></header><div class="page-body"><ul id="66be012b-6709-43e5-8b0f-2a317439342b" class="toggle"><li><details open=""><summary>What is renewable source of energy?</summary><p id="c5cd8c6e-f552-4a81-a92b-321118689285" class="">The type of energy source from which energy can be obtained continuously and can be used again and again is called renewable source of energy. E.g solar energy, wind energy etc.</p></details></li></ul><ul id="3a02efbe-a5b0-4003-a976-8a9f84d07f08" class="toggle"><li><details open=""><summary>What is the primary source of energy? Give one example</summary><p id="e386c5ed-1b9c-4495-8fd1-248f4dae5b5a" class="">The sources of energy which can be used in the same form in which they occur in nature are called primary source of energy. E.g wood, coal, dung etc.</p></details></li></ul><ul id="88fcfc87-f697-4254-a32e-ebce24b1d081" class="toggle"><li><details open=""><summary>What type of energy is coal?</summary><p id="8709924d-dd0c-4191-95d6-9e48dbde1d0d" class="">Non-renewable type</p></details></li></ul><ul id="15f14ec4-fa88-4886-94f4-65fbf9cda263" class="toggle"><li><details open=""><summary>Define nuclear reaction that takes place in the sun.</summary><p id="7809bae2-257a-4ac1-b48b-b5033bb260b1" class="">The nuclear reaction that takes place in the sun in called nuclear fusion reaction.</p><p id="bdfa063a-bc45-4246-93b2-99b7c72c3f63" class=""> The reaction in which two nuclei of light atoms (like hydrogen) combine to form a heavy and more stable nucleus (like helium) with the liberation of a large amount of energy at very high temperature and pressure is called thermonuclear fusion reaction.</p></details></li></ul><ul id="d6db453d-95a0-4aeb-bcba-5af923238da3" class="toggle"><li><details open=""><summary>Write two examples of non-renewable source of energy.</summary><ol type="1" id="13581ae4-f999-4d3d-906b-a8042b445626" class="numbered-list" start="1"><li>Coal</li></ol><ol type="1" id="5599ba4d-dc47-4293-baa9-5e08bc0e7df3" class="numbered-list" start="2"><li>Petrol</li></ol></details></li></ul><ul id="86b11a3a-5c8d-4767-a883-a942840e1936" class="toggle"><li><details open=""><summary>Which of the folliowing are non-renewable sources of energy.(Mineral oil, hydroelectricity, tidal energy and coal)</summary><p id="5fad7ec5-d00c-4bf0-a50f-3c7eea3d1cf8" class="">Mineral oil and coal.</p></details></li></ul><ul id="046d71a8-02e4-4fdb-97a9-50f0a1dfcfd5" class="toggle"><li><details open=""><summary>What are nuclear reaction</summary><p id="b600a873-0de2-4927-b4db-8dec47ee7c9f" class="">The reactions in which the nucleus of an atom undergoes a change forming new atoms with the liberation of large amount of energy are called nuclear reactions.</p></details></li></ul><ul id="8bbacfba-a44b-414d-8032-7ea960c46173" class="toggle"><li><details open=""><summary>What is fossil fuel?</summary><p id="551fa9c7-e4c2-4186-b9c9-880761c65737" class="">The fuel which is obtained from fossils (relics of anicient animals and plants preserved under the earth&#x27;s crust) is called fossil <a href="http://fuel.Eg">fuel.Eg</a> coal, petrol, disel etc</p></details></li></ul><ul id="b9de8c5e-842b-461c-a63b-d4cf5165bfcc" class="toggle"><li><details open=""><summary>Write two examples of biomass.</summary><ol type="1" id="10e27188-6610-4139-8ae1-6dc785647b64" class="numbered-list" start="1"><li>Firewood</li></ol><ol type="1" id="41a2e7e2-9e34-4e90-a8d1-3f21efafca03" class="numbered-list" start="2"><li>Dung</li></ol></details></li></ul><ul id="c36c385c-9071-4449-b9a6-86e2d580cfd9" class="toggle"><li><details open=""><summary>List out any two alternative energy sources.</summary><ol type="1" id="2b6f282c-6e8d-4d43-a040-38d22b8f0574" class="numbered-list" start="1"><li>Biomass energy</li></ol><ol type="1" id="cdfa830d-a89a-4442-8b72-2219e76c2382" class="numbered-list" start="2"><li>Nuclear energy</li></ol></details></li></ul><ul id="be99e731-1252-4ca1-96ff-0b0ac7ec039e" class="toggle"><li><details open=""><summary>What are “alternative energy sources”?</summary><p id="2a04bbc2-6278-4601-a31e-1402c4b4614e" class="">The energy sources which are used to replace the conventional energy sources are called alternative energy sources.</p></details></li></ul><ul id="bc17f170-9cdc-4cd0-9c1c-bdbe0080ef13" class="toggle"><li><details open=""><summary>What is biomass?</summary><p id="527e1f53-564e-4822-b9e0-09b43a274381" class="">The waste materials of living organisms (like dung) and dead plant, dead animals ( like wood, tress, straw ) are called bio-mass</p></details></li></ul><ul id="859791b4-37fc-4257-82b4-550de05c41a7" class="toggle"><li><details open=""><summary>What is bio-fuel?</summary><p id="f7cd1b5f-9a71-455a-82de-9a3c7e4afaec" class="">The fuel obtained from biomass ( cow dung, firewood, straw etc) is called bio-fuel </p></details></li></ul><ul id="88761b94-4dce-41df-9f95-fc5849bae795" class="toggle"><li><details open=""><summary>What is nuclear fission?</summary><p id="ca2d7230-750c-4ca9-b885-0b5187da852e" class="">The process in which an unstable nucleus of a heavy atom (like Uranium-235) splits up into two lighter nuclei with liberation of huge amount of energy is called nuclear fission.</p></details></li></ul><ul id="299b9824-deb0-4ce4-98ba-b385948a6e78" class="toggle"><li><details open=""><summary>Define biomass energy</summary><p id="4125322c-47e4-4734-b9b3-e13d8d6f2da5" class="">The energy obtained from biomass (cow dung, wood) is known as bio mass energy</p></details></li></ul><ul id="b8070875-4252-4b5f-a8b0-d348d79297e3" class="toggle"><li><details open=""><summary>Write any two natural phenomena from which geothermal energy can be obtained.</summary><ol type="1" id="6c2d930d-9e0b-4fe1-a50d-a41f635cf8b3" class="numbered-list" start="1"><li>Volcanic eruption</li></ol><ol type="1" id="a7c644d6-ceb0-44ec-8233-ea20aac0e9b8" class="numbered-list" start="2"><li>Earthquake</li></ol></details></li></ul><ul id="d40d6b27-077a-4526-9f00-1c1fac15ab1e" class="toggle"><li><details open=""><summary>What is tidal energy?</summary><p id="9a33791f-b198-46ab-b613-3e7e24ba89ed" class="">The energy generated from the tides of sea and ocean is called tidal energy.</p></details></li></ul><ul id="b3360dfc-b8c3-49e8-94bd-a2fdeac10c03" class="toggle"><li><details open=""><summary>What is an energy crisis?</summary><p id="c7b85ab2-42ce-42d8-9997-87d1191c9a9f" class="">The situation in which there is acute scarcity of energy source is called energy crisis.</p></details></li></ul><ul id="882b499d-ec2f-4aec-a9bb-1508e84c3479" class="toggle"><li><details open=""><summary>Give two examples of renewable source of energy.</summary><p id="febc9d1a-f4b0-483f-90d7-4c4b6b800c9d" class="">The two examples are: </p><ol type="1" id="fffdf1b4-68fe-4676-bb7c-f04bf5447139" class="numbered-list" start="1"><li>Wind energy</li></ol><ol type="1" id="8538d282-340d-4555-ac07-2dee967debd6" class="numbered-list" start="2"><li>Biomass energy</li></ol></details></li></ul><ul id="4d992890-9420-4a7b-a314-e141105cbc65" class="toggle"><li><details open=""><summary>Write the name of highly quality coal.</summary><p id="704e0581-3997-4f44-ac2d-76f23f983e83" class="">Anthracite:High quality </p><p id="6df70e00-63fa-44b5-9cf1-25ccfe8d7c44" class="">Lignite: Low quality</p></details></li></ul><ul id="839d28a4-2eb2-4aab-9205-8b08c223c6a3" class="toggle"><li><details open=""><summary>What is mineral oil?</summary><p id="49a78e02-fe25-4e4d-9d5a-ce92af32a93c" class="">The petroleum product which is obtained from minerals is called mineral oil.</p></details></li></ul><ul id="1875b7c5-4538-4f16-91ac-45f3c099491b" class="toggle"><li><details open=""><summary>What is hydroelectricity? What is the estimated hydroelectricity generation capacity of our country?</summary><p id="124927ff-e386-48ae-9653-03dce74d3450" class="">The electricity generated by rotating turbines with the help of water is known as hydro-electricity.</p><p id="69b4c30c-fd2d-4b66-ba0a-fd61247345cd" class="">The estimated hydro-electricity generation capacity of our country is <em><strong>83,000MW.</strong></em></p></details></li></ul><ul id="0d81e41e-51be-47dc-8b9f-2db53682ecdf" class="toggle"><li><details open=""><summary>Write a major disadvantage of fossil fuel.</summary><p id="23a9fb39-7795-46de-9e7b-9bb89c223e64" class="">Fossil fuel cause air pollution which it is burnt.</p></details></li></ul><ul id="fde09b0e-f5bd-4619-a612-98334604fcd4" class="toggle"><li><details open=""><summary>What is biogas?</summary><p id="98402b31-e0f3-4219-9903-e538a08363a5" class="">Biogas is a mixture of methane (CH4), carbondioxide (CO2), hydrogen and hydrogen sulphide (H2S). However the major constituent of bio-gas is methane.</p></details></li></ul><ul id="6a349f3b-c386-4576-9ce9-82e3bcd91f59" class="toggle"><li><details open=""><summary>What is geothermal energy?</summary><p id="26baa20a-10e5-469f-b8a5-5ccb079190d5" class="">Geothermal energy is the heat energy obtained from inner parts of earth or from hot rocks inside the earth.</p><p id="b9704f73-73ce-4d17-b4cb-8a3ca7671822" class="">Geo-earth</p><p id="90a103dd-5dab-4232-9448-2324e72816e2" class="">thermal-heat</p></details></li></ul><ul id="402851c7-e3ac-4972-a51b-5fd481aa740f" class="toggle"><li><details open=""><summary>How much energy does the sun radiate in one section?</summary><p id="f744de38-174a-47fb-90ec-609d2fb9b414" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>27</mn><mo>∗</mo><mn>1</mn><msup><mn>0</mn><mn>23</mn></msup><mi>k</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">27*10^{23}kw </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">27</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span><span>﻿</span></span> energy</p></details></li></ul><ul id="99f53d2f-0398-4065-b096-f5abc0a4145b" class="toggle"><li><details open=""><summary>What is a non-renewable source of energy?</summary><p id="9754d345-665c-49e1-be04-b5c6bea2cee8" class="">The sources of energy which gets depleted and cannot be used again and again is called non-renewable source of energy.</p></details></li></ul><ul id="7e276d86-c296-41b6-a3bb-18408968a044" class="toggle"><li><details open=""><summary>From what two natural process is the solar energy being used?</summary><ol type="1" id="1b26728e-fd23-450d-b018-2bb86301bb1f" class="numbered-list" start="1"><li>Photosynthesis</li></ol><ol type="1" id="c4254b0f-9267-43a6-871e-0537323d83a0" class="numbered-list" start="2"><li>Water cycle</li></ol></details></li></ul><ul id="28f60da5-454c-4570-8a02-e7e647ce20a4" class="toggle"><li><details open=""><summary>What is energy? Write down the SI unit of energy.</summary><p id="ef0de8bd-f78e-4c78-9695-2ff3ff513991" class="">The capacity of doing work is called energy.</p><p id="ee9bb8d3-1da6-4ac6-81c9-e4394e2d32cc" class=""> The SI unit of energy is joule.</p></details></li></ul><ul id="4f2a1855-75e7-400d-bac6-1fb46e3d7c56" class="toggle"><li><details open=""><summary>Write the name of any two radioactive elements.</summary><ol type="1" id="8a8a6bb7-4d32-42ce-8715-933e9c3c7746" class="numbered-list" start="1"><li>Uranium</li></ol><ol type="1" id="38741015-b65b-436a-a0c0-2307f5c3a273" class="numbered-list" start="2"><li>Plutonium</li></ol></details></li></ul><ul id="18f6094f-b9e4-4f9a-85be-571ab6e49a20" class="toggle"><li><details open=""><summary>What are the types of energy sources based on time of replacement? Write down their names.</summary><ol type="1" id="6681060e-03df-4262-883a-b4753f0095aa" class="numbered-list" start="1"><li>Renewable sources of energy</li></ol><ol type="1" id="189ace79-d08b-40f0-abf2-2798da50ba4d" class="numbered-list" start="2"><li>Non-renewable sources of energy</li></ol></details></li></ul><ul id="481fa921-b0a2-4edd-8de0-08e7283ff7ef" class="toggle"><li><details open=""><summary>What is the main source of solar energy?</summary><p id="466f6447-ae77-4044-9573-18e6cd04a0c8" class="">The main source of solar energy is thermo-nuclear fusion reaction which takes place continuously in the sum</p></details></li></ul><ul id="b028756a-843d-4abc-bb64-d4c0352de878" class="toggle"><li><details open=""><summary>What is fossil fuel energy? Give any two examples of fossil fuel</summary><p id="b500e9fa-8607-44cc-b5e4-11edd147a12d" class="">The energy which is obtained from fossil fuel is called fossil fuel energy. E.g: petrol, natural gas, etc.</p></details></li></ul></div></article></body></html>

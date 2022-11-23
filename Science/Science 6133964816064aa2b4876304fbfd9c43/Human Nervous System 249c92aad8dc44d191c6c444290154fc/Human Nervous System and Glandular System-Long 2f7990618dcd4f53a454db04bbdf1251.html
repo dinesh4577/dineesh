@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Human Nervous System and Glandular System-Long</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2f799061-8dcd-4f53-a454-db04bbdf1251" class="page sans"><header><h1 class="page-title">Human Nervous System and Glandular System-Long</h1></header><div class="page-body"><ul id="88e5e293-4997-4848-b1ba-3666b384410c" class="toggle"><li><details open=""><summary>Write any three major functions of human brain</summary><ol type="1" id="97b55de3-cf76-482a-8bbb-565739bd11c1" class="numbered-list" start="1"><li>The brain receives information carrying impulses from all the sensory organs of the body.</li></ol><ol type="1" id="3906661b-9e73-4903-a811-d8817d83218d" class="numbered-list" start="2"><li>It responds to the impulses by sending its own instructions through motor nervers to the effectors.</li></ol><ol type="1" id="94c38c8f-3548-4460-815f-912672124466" class="numbered-list" start="3"><li>The brain stores information so that behavior can be modified according to past experience.</li></ol><figure id="d7d13eb0-dc3c-487a-a3bb-d8c4eed7f28c" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled.png"><img style="width:1026px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled.png"/></a></figure></details></li></ul><ul id="acfd0f3d-6a39-403d-861b-70fd7b47f5a8" class="toggle"><li><details open=""><summary>What is cerebellum or small brain? Describe its structure and functions</summary><p id="4fc494ce-b298-4f88-b297-5019499381c5" class="">Cerebellum is the second largest part of the brain which occupies 10% of the total weight of brain. It consists of two deeply convoluted hemisphere. It is situated below the posterior portion of the cerebrum and behind the pons varoli.</p><p id="8efb1b88-6bc5-44be-a1e8-33f27755bbee" class=""><em><strong>Functions</strong></em></p><ol type="1" id="5ee70fd0-f331-41b1-bcd8-2daa81b1f94a" class="numbered-list" start="1"><li>Cerebellum maintains equillibrium and control posture</li></ol><ol type="1" id="22bd8592-fa20-4d4d-958c-8dfb3133b017" class="numbered-list" start="2"><li>It makes the body movements smooth, steady and co-ordinated.</li></ol><ol type="1" id="941ae6db-999a-44b2-853a-f6c61fa8a8cf" class="numbered-list" start="3"><li>It regulates and coordinates the contraction of voluntary muscles and maintains muscular tone.</li></ol><figure id="2db056fa-6cb6-4b08-9e92-b9c0e6ed5231" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%201.png"><img style="width:1009px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%201.png"/></a></figure></details></li></ul><ul id="bd5b78bf-dd70-4adf-bbda-02262d406918" class="toggle"><li><details open=""><summary>State any three functions of nervous system.</summary><ol type="1" id="cd2c01bc-919a-41ef-8a50-2952fb5fcb55" class="numbered-list" start="1"><li>It collects the information both from inside the body and from outside the body with the help of 5 sense organs.</li></ol><ol type="1" id="ca96095f-2926-4b22-84a9-d00a119bb611" class="numbered-list" start="2"><li>It transmits information to effectors, muscles and glands so that they can respond correctly.</li></ol><ol type="1" id="396130c5-56b4-438a-8383-6a110ceda562" class="numbered-list" start="3"><li>It process the information to determine the best response.</li></ol><figure id="3a826e25-429e-4237-98af-66cfb6f64b03" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%202.png"><img style="width:1030px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%202.png"/></a></figure></details></li></ul><ul id="f30e0758-8bef-47bb-bb3d-dafbcc361726" class="toggle"><li><details open=""><summary>Draw a neat and labelled figure showing the structure of neuron</summary><figure id="fa9f460b-2752-4b92-98f0-a2666034d2c0" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%203.png"><img style="width:614px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%203.png"/></a></figure></details></li></ul><ul id="190e052a-ee93-4c83-9eb6-37645e4f6d34" class="toggle"><li><details open=""><summary>Draw a neat and labelled diagram showing the location of endocrine glands in the human body.</summary><figure id="a5694835-e9cb-48e8-8e1d-2fbbaffe7140" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%204.png"><img style="width:936px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%204.png"/></a></figure></details></li></ul><ul id="3dfcc133-2e6e-4b35-8245-8447851d4c9f" class="toggle"><li><details open=""><summary>Draw a diagram of different parts of brain. Damage of which part of brain causes sudden death? Show this part in diagram.</summary><figure id="d2ae2155-e497-4e34-876d-12dc22e58607" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%205.png"><img style="width:945px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%205.png"/></a></figure></details></li></ul><ul id="7e3af919-fa3a-4510-9f53-d0bd274c07f2" class="toggle"><li><details open=""><summary>How does nervous system and glandular system together perform the function of control and coordination in human beings?</summary><p id="c21489b1-6586-48d5-b473-42e553bf3141" class="">Nervous system collects information both from inside and outside of the body with the help of 5 sense organs. It transmits information to organs (effectors), muscles and glands so that they can respond correctly. It also processes information to determine the best response.</p><p id="b8895a20-ae05-480f-a6da-9a0286bd46e4" class="">  Similary, endocrine system controls growth and development of body, reproduction and functions of various organs of the body. </p><p id="8b06480a-e9f3-49e2-ba1f-766d85fae719" class=""> In this way, nervous system and glandular system.</p><figure id="00d4ef76-d618-462c-b58a-ffba593e775c" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%206.png"><img style="width:975px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%206.png"/></a></figure></details></li></ul><ul id="29d02d35-d867-4d46-9ff1-c1342be58483" class="toggle"><li><details open=""><summary>Where are testes located in human body? Name the hormone secreted by testes. Also state the functions of that hormone.</summary><p id="0992e28d-75cd-4efd-b102-fdfaaa4455b1" class="">Testes are oval organs which lie in small muscular pouch (i.e scrotum) outside the abdominal cavity of a man.</p><p id="6d6d8d03-5dbd-4850-95a9-dd0ad227c2e3" class=""> The interstitial cells present in testes produce a male hormone called “ Testosterone”. Testosterone controls the development of secondary sexual characteristics in males like enlargement of penis and scrotum, growth of facial and pubic hair, deeper voice, enlargement of larynx.</p><figure id="63aab980-c1dc-4a4f-8855-037b4e57a677" class="image"><a href="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%207.png"><img style="width:973px" src="Human%20Nervous%20System%20and%20Glandular%20System-Long%202f7990618dcd4f53a454db04bbdf1251/Untitled%207.png"/></a></figure></details></li></ul><ul id="6e6cf653-1b66-49c2-b312-ce470a516ca7" class="toggle"><li><details open=""><summary>Write the name of different endocrine glands with their secretions</summary><ul id="b443ace7-5ab4-457c-a905-20ed6ed52fef" class="bulleted-list"><li style="list-style-type:disc">Pituitary Gland-Skull<ol type="1" id="597fda51-7d89-4ea9-92cf-65ab30e427cc" class="numbered-list" start="1"><li>Growth hormone (GH) or Somatotropic hormone</li></ol><ol type="1" id="24c52196-dad0-487b-8f65-545281423010" class="numbered-list" start="2"><li>Thyroid stimulating hormone (TSH)</li></ol><ol type="1" id="1f61b04b-7d0f-41de-9df4-987e7f1a861a" class="numbered-list" start="3"><li>Follicle stimualting hormone (FSH)</li></ol><ol type="1" id="1c4df4dd-2b28-416c-8cb3-7601f86fd28b" class="numbered-list" start="4"><li>Tropic Hormone (TH)</li></ol><ol type="1" id="b9f2a856-ee87-461c-8e1a-b1c0ccd3ab45" class="numbered-list" start="5"><li>Prolactine hormone (PRL)</li></ol><ol type="1" id="9b64c038-04fd-44fc-8826-fe2ea54c8dec" class="numbered-list" start="6"><li>Luteinizing hormone (LH)</li></ol><ol type="1" id="ff80ccd4-2339-49c9-9d16-707bb77ea2e5" class="numbered-list" start="7"><li>Vasopressin or Antidiuretic hormone (ADH)</li></ol><ol type="1" id="117a03c3-253b-4ab4-8177-0914c6b013e5" class="numbered-list" start="8"><li>Oxytocin hormone</li></ol></li></ul><ul id="739ddbf9-ef72-475c-be0d-4d2f45f3a405" class="bulleted-list"><li style="list-style-type:disc">Thyroid gland-Throat<ol type="1" id="2bc409fb-b603-401b-8945-a00485ad2b6f" class="numbered-list" start="1"><li>Thyroxine hormone </li></ol><ol type="1" id="609ddb79-411f-4d81-a92a-108db0ee07ac" class="numbered-list" start="2"><li>Calcitonin Hormone</li></ol></li></ul><ul id="c28309fd-1039-4227-b263-2fac0fa217a2" class="bulleted-list"><li style="list-style-type:disc">Adrenal gland (Emergency gland)-Kidney<ol type="1" id="21281552-b02d-41a0-b4e4-89039ac31bb1" class="numbered-list" start="1"><li>Adrenalin (Epinephrine and Norepinephrine)</li></ol><ol type="1" id="b5c73512-4bd5-4b30-ae1a-c0e1dd380df9" class="numbered-list" start="2"><li>Aldosterone</li></ol><ol type="1" id="d31f2a02-c4b2-4f0a-a6a1-35aba0b38673" class="numbered-list" start="3"><li>Hydrosterone</li></ol></li></ul><ul id="e3e5ca0c-4165-40ff-8b5a-abe16143831c" class="bulleted-list"><li style="list-style-type:disc">Pancreas-Alimentary canal (Abdomen)<ol type="1" id="63f1d153-9453-4313-93b1-cf2ff80232f5" class="numbered-list" start="1"><li>Insulin</li></ol><ol type="1" id="0cd2b7cb-e2e4-4d8e-a411-960a2f278b9b" class="numbered-list" start="2"><li>Glucagon</li></ol></li></ul><ul id="12bfc91c-bda5-442f-a618-47ab3716451d" class="bulleted-list"><li style="list-style-type:disc">Testes-Scrotum (Male below abdomen)<ol type="1" id="30aeb0af-6268-4ef0-ae1c-cad8dae8d63c" class="numbered-list" start="1"><li>Testosterone</li></ol></li></ul><ul id="b9f8cc9c-fe33-4218-a674-dd4bbd5f9ba6" class="bulleted-list"><li style="list-style-type:disc">Ovary-Reproductive System(Female below abdomen)<ol type="1" id="e2fb0155-624f-4554-89aa-16a7700276ab" class="numbered-list" start="1"><li>Oestrogen</li></ol><ol type="1" id="7fd415fe-0a6f-4959-a6b2-cd8a20d518f1" class="numbered-list" start="2"><li>Progesterone</li></ol></li></ul></details></li></ul></div></article></body></html>
